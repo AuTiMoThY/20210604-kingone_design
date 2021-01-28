@@ -1,0 +1,16 @@
+.page_main {
+	position: relative;
+	z-index: 1;
+	// background-color: #ecf0fa;
+	> .inner {
+		padding-top: 3rem;
+		padding-bottom: 3rem;
+
+		@include media-breakpoint-down(sm) {
+			padding: 1.5rem;
+		}
+		@include media-breakpoint-down(xs) {
+			padding: 1rem;
+		}
+	}
+}

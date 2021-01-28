@@ -1,0 +1,234 @@
+extends _layout.pug
+block vars
+	- var is_login = 1;
+	- var page_class = "home_page";
+	- var page_title = "首頁";
+
+
+block pluginStyle
+	//- link(rel="stylesheet", href="dist/plugin/swiper/swiper.min.css")
+
+block popup
+
+block content
+	.page_wrap(class=page_class)
+		//- .m_mask
+		// =========================================================================
+		// section.home_banner__row  START
+		section.banner__row
+			.banner-swiper
+				#bannerSwiper.swiper-container
+					.swiper-wrapper
+						.swiper-slide
+							a(href="javascript:;").inner
+								img(src="public/images/temp/banner1.jpg")
+						.swiper-slide
+							a(href="javascript:;").inner
+								img(src="public/images/temp/banner2.jpg")
+						.swiper-slide
+							a(href="javascript:;").inner
+								img(src="public/images/temp/banner3.jpg")
+						.swiper-slide
+							a(href="javascript:;").inner
+								img(src="public/images/temp/banner4.jpg")
+						.swiper-slide
+							a(href="javascript:;").inner
+								img(src="public/images/temp/banner5.jpg")
+						.swiper-slide
+							a(href="javascript:;").inner
+								img(src="public/images/temp/banner6.jpg")
+				.inni-swiper-pag.swiper-pagination
+
+
+		// section.home_banner__row  END  !!
+		// =========================================================================
+
+		// =========================================================================
+		// section.brand__row  START
+		section.section_row.brand__row
+			.container-fluid
+				h2.section_row-title
+					span.tw 品牌館
+					span.en BRAND PAVILION
+				.brand-swiper
+					#brandSwiper.swiper-container
+						.brand-list.swiper-wrapper
+							.brand-item.swiper-slide
+								a(href="brand.html").inner
+									.pic
+										img(src="public/images/temp/brand-01.jpg")
+							.brand-item.swiper-slide
+								a(href="brand.html").inner
+									.pic
+										img(src="public/images/temp/brand-02.jpg")
+							.brand-item.swiper-slide
+								a(href="brand.html").inner
+									.pic
+										img(src="public/images/temp/brand-03.jpg")
+							.brand-item.swiper-slide
+								a(href="brand.html").inner
+									.pic
+										img(src="public/images/temp/brand-04.jpg")
+							.brand-item.swiper-slide
+								a(href="brand.html").inner
+									.pic
+										img(src="public/images/temp/brand-05.jpg")
+							.brand-item.swiper-slide
+								a(href="brand.html").inner
+									.pic
+										img(src="public/images/temp/brand-06.jpg")
+							.brand-item.swiper-slide
+								a(href="brand.html").inner
+									.pic
+										img(src="public/images/temp/brand-07.jpg")
+							.brand-item.swiper-slide
+								a(href="brand.html").inner
+									.pic
+										img(src="public/images/temp/brand-01.jpg")
+							.brand-item.swiper-slide
+								a(href="brand.html").inner
+									.pic
+										img(src="public/images/temp/brand-02.jpg")
+							.brand-item.swiper-slide
+								a(href="brand.html").inner
+									.pic
+										img(src="public/images/temp/brand-03.jpg")
+							.brand-item.swiper-slide
+								a(href="brand.html").inner
+									.pic
+										img(src="public/images/temp/brand-04.jpg")
+							.brand-item.swiper-slide
+								a(href="brand.html").inner
+									.pic
+										img(src="public/images/temp/brand-05.jpg")
+							.brand-item.swiper-slide
+								a(href="brand.html").inner
+									.pic
+										img(src="public/images/temp/brand-06.jpg")
+							.brand-item.swiper-slide
+								a(href="brand.html").inner
+									.pic
+										img(src="public/images/temp/brand-07.jpg")
+					.inni-swiper-nav.inni-swiper-prev.brand-swiper-prev
+						.icon_block.icon-arrow-style1.svg-arrow-style1-dims
+							svg.svg_icon
+								use(xlink:href="#arrow-style1")
+					.inni-swiper-nav.inni-swiper-next.brand-swiper-next
+						.icon_block.icon-arrow-style1.svg-arrow-style1-dims
+							svg.svg_icon
+								use(xlink:href="#arrow-style1")
+
+		// section.brand__row  END  !!
+		// =========================================================================
+		// =========================================================================
+		// section.news__row  START
+		section.section_row.news__row
+			.container-fluid
+				h2.section_row-title
+					span.tw 最新消息
+					span.en NEWS
+				.news-swiper
+					#newsSwiper.swiper-container
+						module-newslist.news-list.swiper-wrapper
+							// data-cate : 類別
+							// 1 = 公告
+							// 2 = 活動
+							// 3 = 新品
+							.news-item.swiper-slide(data-cate="1")
+								a(href="news-detail.html", title="51連假出貨公告51連假出貨公告51連假出貨公告51連假出貨公告51連假出貨公告51連假出貨公告51連假出貨公告").inner
+									.pic
+										img(src="public/images/temp/pic-04.jpg")
+									.news-item-title
+										.news-cate 公告
+										h3.txt 51連假出貨公告51連假出貨公告51連假出貨公告51連假出貨公告51連假出貨公告51連假出貨公告51連假出貨公告
+							.news-item.swiper-slide(data-cate="2")
+								a(href="news-detail.html", title="信用卡免簽作業處理費").inner
+									.pic
+										img(src="public/images/temp/pic-03.jpg")
+									.news-item-title
+										.news-cate 活動
+										h3.txt 信用卡免簽作業處理費
+							.news-item.swiper-slide(data-cate="3")
+								a(href="news-detail.html", title="P4BI00 春夏新品超有型!").inner
+									.pic
+										img(src="public/images/temp/pic-02.jpg")
+									.news-item-title
+										.news-cate 新品
+										h3.txt P4BI00 春夏新品超有型!
+							.news-item.swiper-slide(data-cate="3")
+								a(href="news-detail.html", title="STAGE").inner
+									.pic
+										img(src="public/images/temp/pic-01.jpg")
+									.news-item-title
+										.news-cate 新品
+										h3.txt STAGE
+
+
+					.inni-swiper-nav.inni-swiper-prev.news-swiper-prev
+						.icon_block.icon-arrow-style1.svg-arrow-style1-dims
+							svg.svg_icon
+								use(xlink:href="#arrow-style1")
+					.inni-swiper-nav.inni-swiper-next.news-swiper-next
+						.icon_block.icon-arrow-style1.svg-arrow-style1-dims
+							svg.svg_icon
+								use(xlink:href="#arrow-style1")
+		// section.news__row  END  !!
+		// =========================================================================
+		// =========================================================================
+		// section.hot__row  START
+		section.section_row.pdt__row
+			.container-fluid
+				h2.section_row-title
+					span.tw 熱銷商品
+					span.en HOT
+				.pdt-swiper
+					#pdtSwiper.swiper-container
+						module-pdtlist.pdt-list.swiper-wrapper
+							.pdt-item.swiper-slide
+								a(href="product-detail.html", title="亞規抗UV機能排汗Polo衫").inner
+									.brand-pic
+										.pic
+											img(src="public/images/temp/brand-01.jpg", alt="品牌名稱")
+									.extra-txt P4BI00
+									.pdt-pic
+										.pic
+											img(src="public/images/temp/pdt-01.jpg", alt="產品名稱")
+									.pdt-item-title
+										h3.txt 亞規抗UV機能排汗Polo衫1
+							.pdt-item.swiper-slide
+								a(href="product-detail.html", title="亞規抗UV機能排汗Polo衫").inner
+									.brand-pic
+										.pic
+											img(src="public/images/temp/brand-01.jpg", alt="品牌名稱")
+									.extra-txt P4BI00
+									.pdt-pic
+										.pic
+											img(src="public/images/temp/pdt-01.jpg", alt="產品名稱")
+									.pdt-item-title
+										h3.txt 亞規抗UV機能排汗Polo衫1
+							.pdt-item.swiper-slide
+								a(href="product-detail.html", title="亞規抗UV機能排汗Polo衫").inner
+									.brand-pic
+										.pic
+											img(src="public/images/temp/brand-01.jpg", alt="品牌名稱")
+									.extra-txt P4BI00
+									.pdt-pic
+										.pic
+											img(src="public/images/temp/pdt-01.jpg", alt="產品名稱")
+									.pdt-item-title
+										h3.txt 亞規抗UV機能排汗Polo衫1
+
+					.inni-swiper-nav.inni-swiper-prev.hot-swiper-prev
+						.icon_block.icon-arrow-style1.svg-arrow-style1-dims
+							svg.svg_icon
+								use(xlink:href="#arrow-style1")
+					.inni-swiper-nav.inni-swiper-next.hot-swiper-next
+						.icon_block.icon-arrow-style1.svg-arrow-style1-dims
+							svg.svg_icon
+								use(xlink:href="#arrow-style1")
+		// section.hot__row  END  !!
+		// =========================================================================
+
+block page_script
+	script(src="public/js/page/home.js")
+

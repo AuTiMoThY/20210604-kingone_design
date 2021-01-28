@@ -1,0 +1,23 @@
+// Name padding
+// Desc
+// Return
+@mixin padding($dir:x, $size:1rem) {
+	@if ($dir == 'x') {
+		padding-left: $size;
+		padding-right: $size;
+	}
+	@else if ($dir == 'y') {
+		padding-top: $size;
+		padding-bottom: $size;
+	}
+}
+@mixin margin($dir:x, $size:1rem) {
+	@if ($dir == 'x') {
+		margin-left: $size;
+		margin-right: $size;
+	}
+	@else if ($dir == 'y') {
+		margin-top: $size;
+		margin-bottom: $size;
+	}
+}

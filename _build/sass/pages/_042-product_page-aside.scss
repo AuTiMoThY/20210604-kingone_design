@@ -1,0 +1,36 @@
+.product_page-aside {
+	padding-right: 1.875rem;
+}
+
+
+.pdt_filter-group {
+	margin-bottom: 2.4rem;
+	&-title {
+		margin-bottom: 1.2rem;
+		color: #023E96;
+	}
+}
+
+.pdt_filter-item {
+	.inni_rcx {
+		color: #414544;
+
+		&-label {
+			width: 100%;
+			padding: 5px;
+			border-radius: 5px;
+			background-color: transparent;
+			transition: $transition-base;
+
+			&:hover {
+				background-color: lighten(#023E96, 65);
+			}
+		}
+
+		.txt {
+			font-weight: bold;
+		}
+	}
+
+
+}

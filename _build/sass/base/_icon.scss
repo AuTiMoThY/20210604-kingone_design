@@ -1,0 +1,31 @@
+.svg_icon {
+	display: block;
+	@include wh;
+	fill: currentColor;
+}
+
+// _022-brand__products-tabs_list.scss
+.icon-pdt-cate-all img {
+	@include wh(35, 35);
+}
+.icon-pdt-cate-1 img {
+	@include wh(36, 35);
+}
+.icon-pdt-cate-2 img {
+	@include wh(38, 35);
+}
+.icon-pdt-cate-3 img {
+	@include wh(48, 47);
+}
+.icon-pdt-cate-4 img {
+	@include wh(18, 36);
+}
+.icon-pdt-cate-other img {
+	@include wh(35, 35);
+}
+
+
+// _044-product_detail-intro.scss
+.icon-size img {
+	@include wh(42, 11);
+}

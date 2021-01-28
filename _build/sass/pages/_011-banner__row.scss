@@ -1,0 +1,32 @@
+.banner__row {
+
+}
+
+
+.banner-swiper {
+	position: relative;
+	.inni-swiper-pag {
+		width: 100%;
+
+		&:hover {
+			.swiper-pagination-bullet:not(.swiper-pagination-bullet-active) {
+				background-color: darken(#DFDFDF, 30)
+			}
+		}
+	}
+
+	.swiper-pagination-bullet {
+		background-color: #DFDFDF;
+		margin: 0 4px;
+
+		transition: all 0.3s $easeInOutCubic3;
+	}
+
+
+	.swiper-pagination-bullet-active {
+		width: 20px;
+		border-radius: 8px;
+
+		background-color: #3E3A39;
+	}
+}

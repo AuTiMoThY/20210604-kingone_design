@@ -1,0 +1,40 @@
+@mixin rwdBlock($bgW, $bgH) {
+    width: 100%;
+    height: 0;
+    padding-bottom: ($bgH / $bgW) * 100%;
+    background-size: cover;
+
+}
+
+
+@mixin bgRWD($bg, $bgW, $bgH) {
+	@if $bg == null {
+		@include wh2(100% 0);
+		padding-bottom: ($bgH / $bgW) * 100%;
+		@include background-size(cover);
+	} @else {
+		width: 100%;
+		height: 0;
+		padding-bottom: ($bgH / $bgW) * 100%;
+		@include bg('#{$bg}', 50%, 50%);
+		// @include background-size(cover);
+	}
+}
+
+@mixin iframe_rwd($iframe_w, $iframe_h) {
+	position: relative;
+	// height: 1000px;
+	padding-bottom: percentage($iframe_h / $iframe_w);
+	// padding-top: 30px;
+	height: 0;
+	overflow: hidden;
+	iframe {
+	    position: absolute;
+	    top: 0;
+	    left: 0;
+	    width: 100%;
+	    height: 100%;
+	}
+
+
+}

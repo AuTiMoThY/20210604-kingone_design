@@ -1,0 +1,97 @@
+//========================================================================*\
+//	>	Shape
+//========================================================================*/
+@mixin circle($width, $height:$width) {
+	@if (unitless($width)) {
+		$width: $width * 1px;
+	}
+	@if (unitless($height)) {
+		$height: $height * 1px;
+	}
+	width: $width;
+	height: $height;
+	border-radius: 50%;
+}
+@mixin triPrev($color, $w, $w2:(($w * 2) - 3px)) {
+	@include wh(0);
+	border: {
+		style: solid;
+		width: $w $w2 $w 0;
+		color: transparent $color transparent transparent;
+	}
+}
+@mixin triNext($color, $w, $w2:(($w * 2) - 3px)) {
+	@include wh(0);
+	border: {
+		style: solid;
+		width: $w 0 $w $w2;
+		color: transparent transparent transparent $color;
+	}
+}
+@mixin triBtm($color, $w, $w2:(($w * 2) - 3px)) {
+	@include wh(0);
+	border: {
+		style: solid;
+		width: $w2 $w 0 $w;
+		color: $color transparent transparent transparent;
+	}
+}
+@mixin triTop($color, $w, $w2:(($w * 2) - 3px)) {
+	@include wh(0);
+	border: {
+		style: solid;
+		width: 0 $w $w2 $w;
+		color: transparent transparent $color transparent;
+	}
+}
+
+/// Triangle helper mixin
+/// @param {Direction} $direction - Triangle direction, either `top`, `right`, `bottom` or `left`
+/// @param {Color} $color [currentcolor] - Triangle color 
+/// @param {Length} $size [1em] - Triangle size
+@mixin triangle($direction, $color: currentcolor, $size: 1em) {
+  @if not index(top right bottom left, $direction) {
+    @error "Direction must be either `top`, `right`, `bottom` or `left`.";
+  }
+
+  width: 0;
+  height: 0;
+  content: '';
+  z-index: 2;
+  border-#{opposite-direction($direction)}: ($size * 1.2) solid $color;
+  
+  $perpendicular-borders: $size solid transparent;
+  
+  @if $direction == top or $direction == bottom {
+    border-left:   $perpendicular-borders;
+    border-right:  $perpendicular-borders;
+  } @else if $direction == right or $direction == left {
+    border-bottom: $perpendicular-borders;
+    border-top:    $perpendicular-borders;
+  }
+}
+
+
+// @mixin triangleShadow($direction, ) {
+// 	@include absolute($L:50%);
+// 	transform: rotate(-45deg) translateX(-50%);
+
+// 	bottom
+// 	transparent transparent #fff #fff;
+// 	top
+// 	#E60012 #E60012 transparent transparent
+
+
+
+// @include absolute(0, $L:50%);
+// z-index: 2;
+
+// border: 8px solid transparent;
+// border-color: transparent transparent #fff #fff ;
+// transform-origin: center;
+// transform: rotate(135deg);
+// box-shadow: -8px 8px 15px 0 rgba(0, 0, 0, 0.1), -5px 5px 7px 0 rgba(0, 0, 0, 0.1);
+// margin-left: (13 / 2) * -1px;
+// top: 6px;
+
+// }

@@ -1,0 +1,234 @@
+%svg-common {
+	background: url("svg/sprite.view.svg") no-repeat;
+}
+
+.svg-arrow {
+	@extend %svg-common;
+	background-position: 98.61423747889702% 30.41514136615001%;
+}
+
+.svg-arrow-dims {
+	width: 6.84px;
+	height: 11.61px;
+}
+
+.svg-arrow-duble {
+	@extend %svg-common;
+	background-position: 72.78027898737913% 64.45984889788924%;
+}
+
+.svg-arrow-duble-dims {
+	width: 13.51px;
+	height: 11.61px;
+}
+
+.svg-icon-bag {
+	@extend %svg-common;
+	background-position: 96.45583012166554% 16.652906208718626%;
+}
+
+.svg-icon-bag-dims {
+	width: 16.67px;
+	height: 18.88px;
+}
+
+.svg-icon-changePw {
+	@extend %svg-common;
+	background-position: 93.54342249908392% 31.778971354166664%;
+}
+
+.svg-icon-changePw-dims {
+	width: 12.55px;
+	height: 17.12px;
+}
+
+.svg-icon-check1 {
+	@extend %svg-common;
+	background-position: 0 0;
+}
+
+.svg-icon-check1-dims {
+	width: 55.3px;
+	height: 55.3px;
+}
+
+.svg-icon-check2 {
+	@extend %svg-common;
+	background-position: 82.004158004158% 24.665168539325844%;
+}
+
+.svg-icon-check2-dims {
+	width: 28.75px;
+	height: 28.75px;
+}
+
+.svg-icon-checkingInfo {
+	@extend %svg-common;
+	background-position: 0 99.91921150428179%;
+}
+
+.svg-icon-checkingInfo-dims {
+	width: 15.21px;
+	height: 16.22px;
+}
+
+.svg-icon-checkout {
+	@extend %svg-common;
+	background-position: 59.956318722699216% 78.53914447134785%;
+}
+
+.svg-icon-checkout-dims {
+	width: 16.22px;
+	height: 16.1px;
+}
+
+.svg-icon-copy {
+	@extend %svg-common;
+	background-position: 58.45024469820555% 51.246409044574186%;
+}
+
+.svg-icon-copy-dims {
+	width: 26.4px;
+	height: 32.09px;
+}
+
+.svg-icon-history {
+	@extend %svg-common;
+	background-position: 36.76657448239779% 78.61528518338989%;
+}
+
+.svg-icon-history-dims {
+	width: 15.21px;
+	height: 16.22px;
+}
+
+.svg-icon-invite {
+	@extend %svg-common;
+	background-position: 0 85.6375957053595%;
+}
+
+.svg-icon-invite-dims {
+	width: 26.14px;
+	height: 26.37px;
+}
+
+.svg-icon-news {
+	@extend %svg-common;
+	background-position: 96.55068078668684% 59.26045796585485%;
+}
+
+.svg-icon-news-dims {
+	width: 16.8px;
+	height: 16.41px;
+}
+
+.svg-icon-order {
+	@extend %svg-common;
+	background-position: 99.64090554254489% 0;
+}
+
+.svg-icon-order-dims {
+	width: 20.9px;
+	height: 20.17px;
+}
+
+.svg-icon-pdt-type1 {
+	@extend %svg-common;
+	background-position: 52.3228309206169% 0;
+}
+
+.svg-icon-pdt-type1-dims {
+	width: 43.31px;
+	height: 43.31px;
+}
+
+.svg-icon-pdt-type2 {
+	@extend %svg-common;
+	background-position: 0 56.4343300336769%;
+}
+
+.svg-icon-pdt-type2-dims {
+	width: 42.05px;
+	height: 42.01px;
+}
+
+.svg-icon-product {
+	@extend %svg-common;
+	background-position: 96.46311970979444% 72.54410098721476%;
+}
+
+.svg-icon-product-dims {
+	width: 16.68px;
+	height: 16.42px;
+}
+
+.svg-icon-recMbr {
+	@extend %svg-common;
+	background-position: 95.40324388967785% 85.69235740830506%;
+}
+
+.svg-icon-recMbr-dims {
+	width: 15.21px;
+	height: 16.22px;
+}
+
+.svg-icon-reset {
+	@extend %svg-common;
+	background-position: 82.1955488872218% 0;
+}
+
+.svg-icon-reset-dims {
+	width: 29.03px;
+	height: 27.44px;
+}
+
+.svg-icon-salesMgmt {
+	@extend %svg-common;
+	background-position: 20.75426756649464% 80.2954039112138%;
+}
+
+.svg-icon-salesMgmt-dims {
+	width: 23.05px;
+	height: 18.81px;
+}
+
+.svg-icon-statistics {
+	@extend %svg-common;
+	background-position: 48.1351371552433% 78.61528518338989%;
+}
+
+.svg-icon-statistics-dims {
+	width: 15.21px;
+	height: 16.22px;
+}
+
+.svg-icon-store {
+	@extend %svg-common;
+	background-position: 81.80008295313148% 49.537159481618616%;
+}
+
+.svg-icon-store-dims {
+	width: 28.45px;
+	height: 26.57px;
+}
+
+.svg-icon-storeInfo {
+	@extend %svg-common;
+	background-position: 96.71895127680534% 45.69267062555926%;
+}
+
+.svg-icon-storeInfo-dims {
+	width: 17.03px;
+	height: 17.07px;
+}
+
+.svg-icon-trashbin {
+	@extend %svg-common;
+	background-position: 35.220705251696124% 55.71788413098237%;
+}
+
+.svg-icon-trashbin-dims {
+	width: 29.61px;
+	height: 40.75px;
+}
+

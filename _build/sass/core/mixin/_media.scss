@@ -1,0 +1,57 @@
+@mixin media-down($breakpoint) {
+  // @if $breakpoint == "xs" {
+  //   @media only screen and (max-width: $screen-xs-max) { @content; } // 768px
+  // } @else if $breakpoint == "sm" {
+  //   @media only screen and (max-width: $screen-sm-max) { @content; } // 991px
+  // } @else if $breakpoint == "md" {
+  //   @media only screen and (max-width: $screen-md-max) { @content; } // 1199px
+  // } @else if $breakpoint == "i5" {
+  //   @media only screen and (max-width : 320px) { @content;}
+  // } @else {
+    @media only screen and (max-width: #{$breakpoint}) { @content; }
+  // }
+}
+
+
+// Media query manager
+/*
+0 - 600px:      Phone
+600 - 900px:    Tablet portrait
+900 - 1200px:   Tablet landscape
+[1200 - 1800]:  is where our normal styles apply
+1800 + :        Big destop
+
+$breakpoint argument choices:
+- phone
+- tab-port
+- tab-land
+- big-desktop
+
+Order: base + typography > general layout + grid > page layout > components
+
+1em = 16px
+*/
+
+@mixin respond($breakpoint) {
+    @if $breakpoint == phone-xs {
+        @media only screen and (max-width: 23.375em) { @content };        //374px
+    }
+    @if $breakpoint == phone {
+        @media only screen and (max-width: 37.5em) { @content };        //600px
+    }
+    @if $breakpoint == ipad {
+        @media only screen and (min-width: 48em) { @content };        // 768px
+    }
+    @if $breakpoint == tab-port {
+        @media only screen and (min-width: 56.25em) { @content };       //900px
+    }
+    @if $breakpoint == ipad-pro {
+        @media only screen and (min-width: 65em) { @content };        // 1040px
+    }
+    // @if $breakpoint == tab-land {
+    //     @media only screen and (max-width: 75em) { @content };          //1200px
+    // }
+    // @if $breakpoint == big-desktop {
+    //     @media only screen and (min-width: 112.5em) { @content };       //1800px
+    // }
+}

@@ -1,0 +1,31 @@
+@mixin bg($name, $bgpx:0, $bgpy:0, $repeat:no-repeat) {
+	// $name: unquote($name);
+	$repeat: unquote($repeat);
+	@if type-of($name) == number {
+		//  background-position
+		$bgpxx: $name;
+		$bgpy: $bgpx;
+		@if (unitless($bgpxx)) {
+			$bgpxx: $bgpxx * 1px;
+		}
+		@if (unitless($bgpy)) {
+			$bgpy: $bgpy * 1px;
+		}
+		background-position: $bgpxx $bgpy;
+	}
+	@else if type-of($name) == color {
+		//  background-color
+		background-color: $name;
+	}
+	@else if $name == "fixed" or $name == "scroll" {
+		$atta: $name;
+		background-attachment: $atta;
+	}
+	@else if $name == "none"{
+		background-image: none;
+	}
+	@else {
+		background: image-url(#{$name}) $bgpx $bgpy $repeat;
+		background-size: cover;
+	}
+}

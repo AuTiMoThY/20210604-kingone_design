@@ -1,0 +1,109 @@
+.signup_page {
+	&-wrap {
+		padding: 70px 0;
+		background-color: #E6E6E5;
+
+
+		.container-fluid {
+
+		}
+	}
+}
+
+
+.signup-wrapper {
+	display: grid;
+	grid-template-columns: 100% 100%;
+
+
+	.show-signup-step2 & {
+		transform: translateX(-100%);
+	}
+}
+
+.signup-wrap {
+
+}
+
+
+.signup-container {
+	width: 990px;
+	margin: auto;
+}
+
+.signup-title {
+	margin-bottom: 50px;
+	@include remCalc(font-size, 30);
+	color: #3E3A39;
+	text-align: center;
+}
+
+
+%blockStyle {
+	margin-bottom: 50px;
+	padding: 2rem;
+	background-color: #fff;
+	border: 1px solid #B4B4B5;
+	box-shadow: 2px 2px 5px rgba(#231815, 0.2);
+}
+.agreement-wrap {
+	@extend %blockStyle;
+}
+.agreement-header {
+	padding-bottom: 1.2rem;
+	margin-bottom: 1.2rem;
+	border-bottom: 1px solid #B4B4B5;
+	@include remCalc(font-size, 22);
+}
+.agreement-content {
+	height: 340px;
+	// padding: 1.2rem 0;
+	color: #3E3A39;
+	@include remCalc(font-size, 20);
+
+	.content-inner {
+		padding-right: 2rem;
+	}
+}
+
+%btns_style {
+	padding-left: 50px;
+	padding-right: 50px;
+
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-gap: 80px;
+}
+
+%btn_style1 {
+	position: relative;
+	.icon_block {
+		@include absolute(50%, 1rem);
+		@include wh(11, 18);
+		transform: scaleX(-1) translateY(-50%);
+	}
+}
+.agreement-btns, .signup_frm-btns {
+	@extend %btns_style;
+
+	.inni_btn {
+
+	}
+
+	.agreement-yes {
+		@extend %btn_style1;
+	}
+}
+
+.signup_frm-wrap {
+	@extend %blockStyle;
+}
+
+
+.signup_frm-btns {
+	@extend %btns_style;
+}
+
+.signup_frm-submit {
+	@extend %btn_style1;
+}

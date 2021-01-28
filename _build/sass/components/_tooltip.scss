@@ -1,0 +1,19 @@
+.#{$project_name}_tooltip, module-tooltip {
+	@include absolute(-60%, $L:50%);
+	transform: translateX(-50%);
+	background-color: color("main");
+	@include linear-gradient(to bottom, color("orange"), color("main"));
+	// @include linear-gradient(to bottom, #E74291, #920783);
+	padding: 8px 16px;
+	border-radius: 5px;
+	color: color("b1");
+	font-size: 14px;
+
+	&:before {
+		@include psudoClass;
+		@include absolute($B:(8 * 1.2) * -1px, $L:50%);
+		transform: translateX(-50%);
+		@include triangle(bottom, color("main"), 8px);
+		// @include triangle(bottom, #920783, 8px);
+	}
+}

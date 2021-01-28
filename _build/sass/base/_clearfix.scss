@@ -1,0 +1,6 @@
+/*------------------------------------------------------------------------*\
+		>>	clearfix
+\*------------------------------------------------------------------------*/
+.cf:before, .cf:after {content: ""; display: table; height: 0; overflow: hidden; flex-basis: 0; order: 1;}
+.cf:after { clear: both; }
+.cf { zoom: 1; }

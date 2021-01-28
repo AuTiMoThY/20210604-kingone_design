@@ -1,0 +1,26 @@
+
+/// Since the current way to qualify a class from within its ruleset is quite
+/// ugly, here is a mixin providing a friendly API to do so.
+/// @author Hugo Giraudel
+/// @param {String} $element-selector - Element selector
+@mixin qualify($element-selector) {
+  @at-root #{$element-selector} & {
+    @content;
+  }
+}
+@mixin oftype($num) {
+	@if is-number($num) {
+	 	@if $num == 1 {
+	 		&:first-of-type { @content; }
+	 	}
+	 	@else {
+			&:nth-of-type(#{$num}) { @content; }
+	 	}
+	}
+	@else if $num == "odd" {
+		&:nth-of-type(odd) { @content; }
+	}
+	@else if $num == "even" {
+		&:nth-of-type(even) { @content; }
+	}
+}

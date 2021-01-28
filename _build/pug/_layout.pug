@@ -1,0 +1,216 @@
+doctype html
+html(class="" lang="zh-Hant")
+	- var current_active = "";
+	- var version = "20201208";
+	- var is_login = 0;
+	- var PATH_IMG = "public/images/";
+	- var page_class = "";
+	block vars
+	head
+		meta(charset="utf-8")
+		meta(http-equiv="X-UA-Compatible" content="IE=edge")
+		block title
+			title #{page_title} | INNI 愛力國際【買衣服找愛力】GILDAN吉爾登台灣總代理
+		meta(name="keywords", content="")
+		meta(name="description", content="")
+		meta(name="robots", content="index,follow")
+		meta(name="viewport", content="width=device-width, user-scalable=no")
+
+		// 讓手機不判斷它是電話號碼變顏色
+		meta(name="format-detection", content="telephone=no")
+
+		//- include _favicon.html
+
+		//- // reset
+		//- link(rel="stylesheet", href="public/css/reset.css")
+
+		// Font Awesome
+		//- link(rel="stylesheet", href="public/fontawesome/css/fa-svg-with-js.css")
+		script(src="public/fontawesome/js/all.js", defer)
+
+		block pluginStyle
+
+		//- // style
+		//- <link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC" rel="stylesheet">
+
+		//- link(rel="stylesheet", href="https://csshake.surge.sh/csshake.min.css")
+		//- link(rel="stylesheet", href="public/plugins/fullpage/fullpage.css")
+		link(rel="stylesheet", href="public/plugins/simplebar/simplebar.css")
+		link(rel="stylesheet", href="public/plugins/swiper/swiper-bundle.css")
+		//- link(rel="stylesheet", href="public/plugins/mCustomScrollbar/jquery.mCustomScrollbar.min.css")
+
+		//- link(rel="stylesheet", href="public/css/animate.css")
+		link(rel="stylesheet", href="public/css/style.css?v=" + version)
+
+		// js
+		script(src="public/js/libs/modernizr-custom.min.js")
+		script(src="public/js/ModernizrAu.js")
+
+
+	body
+		// =========================================================================
+		// SVG sprites  START
+		.symbols_svg.d-none
+			//
+			include ../symbol/svg/sprite.symbol.svg
+		// SVG sprites  END  !!
+		// =========================================================================
+		#top
+		//- #goTop
+			a(href="#top")
+				svg.svg_icon.icon-top
+					use(xlink:href="#top")
+
+		// =========================================================================
+		// .body_wrap  START
+		.body_wrap
+			if is_login
+				include _header-login.pug
+			else
+				include _header.pug
+			// =========================================================================
+			// 頁面內容  START
+			// =========================================================================
+			block content
+			// =========================================================================
+			// 頁面內容  END  !!
+			// =========================================================================
+			include _footer.pug
+		// =========================================================================
+		// 彈出視窗 / 通知
+		// =========================================================================
+		// 登入 / 註冊 -------------------------------------------------------------
+		#popupSignInSignUp.inni_popup.inni_popup-sign_in_sign_up
+			.inni_popup-bg
+			.inni_popup-wrap
+				.inni_popup-close(onclick="inniPopup.closethis(this)")
+					.icon
+				.inni_popup-container(data-simplebar data-simplebar-auto-hide="false")
+					.container-inner
+						.sign_in
+							.inni_popup-hd
+								h2.title.mb-3 會員登入
+							.inni_popup-bd
+								.inni_frm.signin_frm
+									form(action="index-login.html").inner#signinFrm
+										.form-group.gui_number
+											.row.no-gutters.konodioda
+												label.inni_frm-label.signin_frm-label(for="guiNumber") 統編
+												.inni_frm-field
+													input(type="text" placeholder="請輸入註冊帳號")#guiNumber.inni_frm-input.signin_frm-input
+											.row.no-gutters
+												.inni_frm-error(data-error-field="guinumber")
+
+										.form-group.user_id
+											.row.no-gutters.konodioda
+												label.inni_frm-label.signin_frm-label(for="userId") 帳號
+												.inni_frm-field
+													input(type="text" placeholder="請輸入帳號")#userId.inni_frm-input.signin_frm-input
+											.row.no-gutters
+												.inni_frm-error(data-error-field="id")
+
+										.form-group.user_pw
+											.row.no-gutters.konodioda
+												label.inni_frm-label.signin_frm-label(for="userPw") 密碼
+												.inni_frm-field
+													input(type="password" placeholder="請輸入密碼")#userPw.inni_frm-input.signin_frm-input
+											.row.no-gutters
+												.inni_frm-error(data-error-field="pw")
+
+										.form-group.validation_code.mb-4
+											.row.no-gutters.konodioda
+												label.inni_frm-label.signin_frm-label(for="verCode") 驗證碼
+												.inni_frm-field.validation_code-field
+													.validation_code-input
+														input(type="text" placeholder="請輸入驗證碼")#verCode.inni_frm-input.signin_frm-input
+													.validation_code-pic
+														img(src="public/images/temp/validation_code.jpg", alt="")
+													button.validation_code-reset(type="button")
+														svg.svg_icon.icon-reset
+															use(xlink:href="#icon-reset")
+											.row.no-gutters
+												.inni_frm-error(data-error-field="vercode")
+
+										.form-group.signin_frm-btns
+											button.inni_btn.inni_btn-orange.signin_frm-submit(type="button") 登入
+										.form-group.signin_frm-ft.mb-0.d-flex.justify-content-between
+											.remember_me
+												.inni_rcx
+													label.inni_rcx-label(for="rememberMe")
+														input#rememberMe.inni_rcx-input(type="checkbox" name="rememberMe")
+														.choicemark
+														.txt 記住我的帳號
+											.forget_pw
+												a(href="javascript:;" title="忘記密碼" data-popup="popupForgetPw").txt 忘記密碼
+						.sign_up
+							.inni_popup-hd
+								h2.title.mb-3 首次客戶使用
+							.inni_popup-bd
+								.sign_up-inner
+									p ＊註冊會員可享受流暢購物。
+									p ＊可查詢歷史訂單紀錄、貨到通知及帳號管理。
+									p ＊歡迎您加入愛力INNI會員。
+								.sign_up-btns
+									a.inni_btn.inni_btn-default(href="sign-up.html") 會員註冊
+		// 忘記密碼 -------------------------------------------------------------
+		#popupForgetPw.inni_popup.inni_popup-forget_pw
+			.inni_popup-bg
+			.inni_popup-wrap
+				.inni_popup-close(onclick="inniPopup.closethis(this)")
+					.icon
+				.inni_popup-container(data-simplebar data-simplebar-auto-hide="false")
+					.container-inner
+						.inni_popup-hd
+							h2.title.mb-3 忘記密碼
+						.inni_popup-bd
+							.inni_frm.forget_pw_frm
+								form(action="index-login.html").inner#forgetPwFrm
+									.form-group.signup_id
+										.row.no-gutters.konodioda
+											label.inni_frm-label.forget_pw_frm-label(for="signupId") 註冊帳號
+											.inni_frm-field
+												input(type="text" placeholder="請輸入註冊帳號")#signupId.inni_frm-input.forget_pw_frm-input
+										.row.no-gutters
+											.inni_frm-error(data-error-field="signupid")
+									.form-group.email.mb-4
+										.row.no-gutters.konodioda
+											label.inni_frm-label.forget_pw_frm-label(for="email") 信箱
+											.inni_frm-field
+												input(type="text" placeholder="請輸入信箱")#email.inni_frm-input.forget_pw_frm-input
+										.row.no-gutters
+											.inni_frm-error(data-error-field="email")
+									.form-group.forget_pw_frm-btns.mb-0
+										button.inni_btn.inni_btn-blue.forget_pw_frm-submit(type="button") 送出
+
+
+
+		block popup
+
+
+		script(src="//ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js")
+		script window.jQuery || document.write('<script src="public/js/libs/jquery.min.js"><\/script>')
+		//-
+
+		// script(src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js")
+		script(src="public/js/libs/plugin_mix.js")
+		//- script(src="public/plugin/autosize.min.js")
+		//- script(src="public/plugin/multiple-select.js")
+
+		//- 動態效果
+		//- script(src="public/plugins/greensock/TweenMax.min.js")
+		//- script(src="public/plugins/scrollmagic/ScrollMagic.min.js")
+		//- script(src="public/plugins/scrollmagic/plugins/jquery.ScrollMagic.min.js")
+		//- script(src="public/plugins/scrollmagic/plugins/debug.addIndicators.min.js")
+		//- script(src="public/plugins/scrollmagic/plugins/animation.gsap.min.js")
+		//- script(src="public/plugins/snap.svg.js")
+
+
+		//- script(src="public/plugins/fullpage/fullpage.js")
+		script(src="public/plugins/simplebar/simplebar.js")
+		script(src="public/plugins/swiper/swiper-bundle.js")
+		//- script(src="public/plugins/fullpage/fullpage.extensions.min.js")
+		//- script(src="public/plugins/swiper/swiper.js")
+		//- script(src="public/plugins/mCustomScrollbar/jquery.mCustomScrollbar.concat.min.js")
+		//- script(src="public/plugins/html2canvas.js")
+		script(src="public/js/script.js?v=" + version)
+		block page_script

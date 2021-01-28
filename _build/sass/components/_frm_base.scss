@@ -1,0 +1,116 @@
+// .control-field {
+// 	position: relative;
+// }
+
+::-webkit-input-placeholder { /* Edge */
+  color: #D5D5D5;
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: #D5D5D5;
+}
+
+::placeholder {
+  color: #D5D5D5;
+}
+
+label[id$="error"] {
+    @include absolute($B:-41px, $L:0);
+    z-index: 10;
+    max-width: 100%;
+    background-color: #df5a16;
+    border-radius: 3px;
+    padding: 5px 10px;
+    color: #fff;
+    font-size: 14px;
+    font-size: 0.875rem;
+
+    &:before {
+    	@include psudoClass;
+    	@include absolute(-6px);
+    	@include triTop(#df5a16, 6px, 6px);
+    }
+
+    .control-field & {
+    	left: 1rem;
+    }
+}
+
+
+// .form-control {
+// 	display: block;
+// 	width: 100%;
+// 	padding: $input-padding-y $input-padding-x;
+// 	font-size: $font-size-base;
+// 	line-height: $input-line-height;
+// 	color: $input-color;
+// 	background-color: $input-bg;
+// 	background-clip: padding-box;
+// 	// border: $input-border-width solid $input-border-color;
+
+// 	border: none;
+// 	box-shadow: 0 2px 2px 0 rgba(0,0,0,0.16), 0 0 0 1px rgba(0,0,0,0.08);
+
+// 	border-radius: 5px;
+
+// 	transition:all 0.45s cubic-bezier(0.4,0.0,0.2,1);
+
+// 	// @extend .z-depth-1;
+
+// 	&:hover {
+// 		box-shadow: 0 3px 8px 0 rgba(0,0,0,0.2), 0 0 0 1px rgba(0,0,0,0.08);
+// 	}
+
+// 	&:focus {
+// 		color: $input-focus-color;
+// 		background-color: $input-focus-bg;
+// 		border-color: $input-focus-border-color;
+// 		outline: 0;
+// 		box-shadow: 0 3px 8px 0 rgba(0,0,0,0.3), 0 0 0 1px rgba(0,0,0,0.10);
+// 	}
+
+// 	&.error {
+// 		background-color: rgba(185, 26, 18, 0.2);
+// 		border-color: #b91a12;
+// 		color: #161616;
+// 	}
+// }
+
+// select.form-control {
+// 	&:not([size]):not([multiple]) {
+// 	  // min-height: $input-height-border;
+// 	  height: $input-height-inner;
+// 	}
+// }
+
+// .form-btns {
+// 	@include media-breakpoint-down(xs){
+// 		display: table;
+// 		margin: auto;
+// 	};
+// }
+
+input[type="date"], input[type="time"] {
+	min-height: 38px;
+}
+
+.frm_btns {
+	text-align: center;
+
+	display: flex;
+	justify-content: center;
+}
+
+.autosize_textarea {
+	min-height: 150px;
+	resize: none;
+}
+
+.frm_label {
+	margin-bottom: 0;
+}
+
+.form-group {
+    position: relative;
+	margin-bottom: 1.25rem;
+}

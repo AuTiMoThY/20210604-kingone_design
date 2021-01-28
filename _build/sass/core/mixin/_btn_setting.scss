@@ -1,0 +1,13 @@
+@mixin btn_setting($bg_color, $txt_color, $depth:"darken") {
+	background-color: $bg_color;
+	color: $txt_color;
+
+	&:hover {
+		color: #fff;
+		@if $depth == "darken" {
+			background-color: darken($bg_color, 10);
+		} @else if $depth == "lighten" {
+			background-color: lighten($bg_color, 10);
+		}
+	}
+}

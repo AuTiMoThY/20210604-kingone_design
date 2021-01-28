@@ -1,0 +1,130 @@
+.#{$project_name}_popup {
+	@include fixed(0, $L:0);
+	z-index: 9999;
+	@include wh(100vw, 100vh);
+
+	opacity: 0;
+	z-index: -1;
+
+	transition: $transition-base;
+
+	&.js-show {
+		opacity: 1;
+		z-index: 999;
+	}
+	&-bg {
+		@include wh;
+		background-color: rgba(#000, 0.5);
+	}
+
+	&-wrap {
+		@include absolute(50%, $L:50%);
+		transform: translate(-50%, -50%) scale(0);
+		transform-origin: 50% 50%;
+		width: 480px;
+		padding: 2rem;
+
+		border-radius: 30px;
+		background-color: #fff;
+		box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.25);
+
+		opacity: 0;
+		transition: $transition-base;
+
+		@include media-breakpoint-down(xs) {
+			width: 100%;
+		}
+
+		.js-show & {
+			opacity: 1;
+			transform: translate(-50%, -50%) scale(1);
+		}
+
+		.simplebar-track {
+			right: -15px;
+		}
+	}
+
+	&-container {
+		position: relative;
+		max-height: 90vh;
+	}
+
+	&-close {
+		@include absolute(1rem, 1rem);
+		z-index: 10;
+		// transform: translate(50%, -50%);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		@include circle(40);
+		background-color: #fff;
+		border: 1px solid transparent;
+		// box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1), 0px 2px 5px rgba(0, 0, 0, 0.1);
+		transition: $transition-base;
+		cursor: pointer;
+
+		// @include media-breakpoint-down(sm) {
+		// 	top: 1.5rem;
+		// 	right: 1.5rem;
+		// }
+
+
+		.icon {
+			position: relative;
+			@include wh(15);
+
+			&:before, &:after {
+				@include psudoClass;
+				@include absolute(50%, $L:50%);
+				@include wh(17, 4);
+				background-color: #1A1A1A;
+			}
+
+			&:before {
+				transform: translate(-50%, -50%) rotate(-45deg);
+			}
+
+			&:after {
+				transform: translate(-50%, -50%) rotate(45deg);
+			}
+		}
+
+		// .svg_icon {
+		// 	@include wh(25);
+		// 	fill: color("BLUE");
+		// 	transition: $transition-base;
+		// }
+
+		&:hover {
+			background-color: darken(#fff, 10);
+
+			// .svg_icon {
+			// 	fill: #fff;
+			// }
+		}
+
+		.popup-no-colose & {
+			display: none;
+		}
+	}
+
+	&-hd {
+		width: 100%;
+		border-color: #fff;
+		border-bottom: 1px solid #414544;
+		.title {
+			padding-left: 1.2rem;
+			@include remCalc(font-size, 22);
+			color: #3E3A39;
+		}
+
+
+	}
+
+	&-bd {
+		padding-top: 1rem;
+	}
+
+}
+

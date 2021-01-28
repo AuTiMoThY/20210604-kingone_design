@@ -1,0 +1,52 @@
+@mixin wh($width:100%, $height:$width) {
+	@if type-of($width) == number {
+		@if (unitless($width)) {
+			$width: $width * 1px;
+		}
+		@if (unitless($height)) {
+			$height: $height * 1px;
+		}
+		width: $width;
+		height: $height;
+	} @else if $width == "auto" {
+		width: $width;
+		height: $height;
+	} @else {
+		$name: $width;
+		$file: $height;
+		width: image-width("#{$name}.#{$file}");
+		height: image-height("#{$name}.#{$file}");
+	}
+}
+@mixin wh2($value:100%) {
+	$width: nth($value, 1);
+	$height: $width;
+
+	@if length($value) > 1 {
+		$height: nth($value, 2);
+	}
+
+	@if is-size($width) {
+		width: $width;
+	} @else if (not(is-string($width)) and unitless($width)) {
+		width: $width * 1px;
+	} @else {
+		//@warn "`#{$width}`";
+	}
+
+	@if is-size($height) {
+		height: $height;
+	} @else if (not(is-string($height)) and unitless($height)) {
+		height: $height * 1px;
+	} @else {
+		//@warn "`#{$height}`";
+	}
+
+
+	@if is-string($width) and is-string($height) {
+		$name: $width;
+		$file: $height;
+		width: image-width("#{$name}.#{$file}");
+		height: image-height("#{$name}.#{$file}");
+	}
+}

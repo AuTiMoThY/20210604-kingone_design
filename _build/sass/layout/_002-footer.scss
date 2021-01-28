@@ -1,0 +1,144 @@
+.page_footer {
+	padding-top: 50px;
+	background-color: #3E3A39;
+	color: #fff;
+	@include remCalc(font-size, 14);
+
+	.logo {
+		@include wh(160, 85);
+		filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(0deg) brightness(100%) contrast(100%);
+	}
+
+	&-top {
+		display: grid;
+		grid-template-columns: percentage(390 / 1705) percentage(620 / 1705) percentage((1705 - 390 - 620) / 1705);
+
+		@include media-down(1660px){
+			grid-template-columns: 30% 30% 40%;
+		}
+	}
+
+	&-bottom {
+		padding: 1.6rem 0;
+		@include remCalc(font-size, 12);
+	}
+}
+
+
+.footer-title {
+	margin-bottom: 1.8rem;
+	font-size: 1rem;
+}
+
+.contact {
+	position: relative;
+	padding-right: 5%;
+
+	&:after {
+		@include psudoClass;
+		@include wh(1, 100%);
+		background-color: #fff;
+		@include absolute(0, 0);
+	}
+}
+
+.contact-list {
+	display: flex;
+	ul {
+		padding-right: 1.6rem;
+	}
+
+	@include media-down(1660px){
+		display: block;
+	}
+}
+
+.contact-txt {
+	display: flex;
+	margin-bottom: 1rem;
+
+	.title {
+		flex: 0 0 auto;
+	}
+
+	.txt {
+		flex: 0 1 auto;
+	}
+}
+
+
+.sitemap {
+	padding-left: 5%;
+	display: flex;
+	// justify-content: space-between;
+
+	&-list {
+		flex: 1 1 auto;
+		text-align: center;
+		color: #fff;
+	}
+
+	&-item {
+		margin-bottom: 1rem;
+		> .inner {
+			// display: block;
+			color: currentColor;
+
+			@include hover_line(2, #fff);
+		}
+	}
+}
+
+
+
+.social {
+	padding-top: 20px;
+	&-item {
+		float: left;
+
+		&:not(:first-of-type) {
+			margin-left: 25px;
+		}
+		> .inner {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			@include circle(25);
+			background-color: #fff;
+			transition: all 0.3s $easeInOutCubic3;
+
+			&:hover {
+				transform: scale(1.2);
+				.icon-web {
+					color: #ed7a2f;
+					svg {
+						stroke: #ed7a2f;
+					}
+				}
+				.icon-facebook {
+					color: #003c96;
+				}
+				.icon-line {
+					color: #52b260;
+				}
+			}
+		}
+
+		.svg_icon {
+			transition: $transition-base;
+		}
+
+		.icon-web {
+			svg {
+				stroke: #3E3A39;
+			}
+		}
+
+		.icon-facebook {
+			color: #3E3A39;
+		}
+		.icon-line {
+			color: #3E3A39;
+		}
+	}
+}

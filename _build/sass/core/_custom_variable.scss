@@ -1,0 +1,114 @@
+$project_name: "inni";
+
+// > color
+$colors: map-merge((
+"orange": #EB663D,
+
+), $colors);
+
+$hover_color: darken(#fff, 5);
+// #32373E
+
+$base-font-size: 16;
+
+// > btn
+$btn-padding-y: 0.85rem;
+$btn-padding-x: 2.13rem;
+$btn-padding-y-sm: 0.5rem;
+$btn-padding-x-sm: 1.6rem;
+$btn-padding-y-md: 0.7rem;
+$btn-padding-x-md: 1.6rem;
+$btn-padding-y-lg: 1rem;
+$btn-padding-x-lg: 2.4rem;
+$btn-border-radius: 3px;
+
+$border-radius-base: 5px;
+
+
+// > easing
+$easing1: cubic-bezier(0.4, 0, 0.2, 1);
+$easing2: cubic-bezier(0.7, 0, 0.3, 1);
+$easeInOutCubic: cubic-bezier(0.645, 0.045, 0.355, 1);
+$easeInOutCubic2: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+$easeInOutCubic3: cubic-bezier(0.12, 0.49, 0.17, 0.87);
+$easing3: cubic-bezier(.87,-.41,.19,1.44);
+
+// > transition
+$transition-base: all 0.3s ease-in-out;
+
+// > layout
+$aside_w: 250;
+$aside_w-close: 50;
+$header_h: 120;
+
+
+
+
+// > shadow
+$boxShadow: 0px 9px 21px rgba(0, 0, 0, 0.75);
+$boxShadowHover: 3px 10px 21px rgba(0, 0, 0, 1);
+$boxShadowHover1: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
+
+$boxShadowActive1: 0 3px 7px 0 rgba(0, 0, 0, 0.58), 0 2px 9px 0 rgba(0, 0, 0, 0.55);
+
+$boxShadow-weak: 0px 1px 3px rgba(#000, 0.2);
+// $cntWrapBoxShadow: 0px 1px 3px rgba(#000, 0.2);
+
+// > iframe_rwd
+$iframe_rwd-w: 400;
+$iframe_rwd-h: 200;
+
+$input-height-border: 0;
+$input-height: calc(#{$input-height-inner} + #{$input-height-border}) !default;
+
+// > font family
+$normal_font: PingFang TC, "Microsoft JhengHei", "微軟正黑體", "蘋果儷中黑", \5FAE\x8F6F\6B63\9ED1\4F53, Arial, "Helvetica Neue", Helvetica;
+$NotoSansTC: 'Noto Sans TC', "Microsoft JhengHei", "微軟正黑體", "蘋果儷中黑", \5FAE\x8F6F\6B63\9ED1\4F53, Arial, "Helvetica Neue", Helvetica;
+$YaHei: "Microsoft YaHei UI", "微軟正黑體", "蘋果儷中黑", \5FAE\x8F6F\6B63\9ED1\4F53, Arial, "Helvetica Neue", Helvetica;
+
+
+// $color-primary: #1c84c6;
+// $color-secondary: #75B9E7;
+// $color-darkblue: #31708f;
+// $color-lightgrey: #b1b6bc;
+// $color-grey: #6c757d;
+// $color-black: #3d3d3d;
+// $color-red: #F57373;
+// $color-error: #F57373;
+
+// $headerH: 60px;
+
+
+
+
+
+// > shadow
+$z-depth-1:          0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12) !default;
+$z-depth-1-half:     0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15) !default;
+$z-depth-2:          0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19) !default;
+$z-depth-3:          0 12px 15px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19) !default;
+$z-depth-4:          0 16px 28px 0 rgba(0, 0, 0, 0.22), 0 25px 55px 0 rgba(0, 0, 0, 0.21) !default;
+$z-depth-5:          0 27px 24px 0 rgba(0, 0, 0, 0.2), 0 40px 77px 0 rgba(0, 0, 0, 0.22) !default;
+// $boxShadow: 0px 9px 21px rgba(0, 0, 0, 0.75);
+// $boxShadowHover: 3px 10px 21px rgba(0, 0, 0, 1);
+// $boxShadowHover1: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
+
+// $boxShadow-weak: 0px 1px 3px rgba(#000, 0.2);
+// // $cntWrapBoxShadow: 0px 1px 3px rgba(#000, 0.2);
+
+// $dropShadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+// $dropShadow-hover: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+
+// $boxShadow1: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+// $boxShadow2: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+
+// // > iframe_rwd
+// $iframe_rwd-w: 400;
+// $iframe_rwd-h: 200;
+
+// // $input-height-border: 0;
+// // $input-height: calc(#{$input-height-inner} + #{$input-height-border}) !default;
+
+// // > font family
+// $normal_font: PingFang TC, "Microsoft JhengHei", "微軟正黑體", "蘋果儷中黑", \5FAE\x8F6F\6B63\9ED1\4F53, Arial, "Helvetica Neue", Helvetica;
+// $NotoSansTC: 'Noto Sans TC', "Microsoft JhengHei", "微軟正黑體", "蘋果儷中黑", \5FAE\x8F6F\6B63\9ED1\4F53, Arial, "Helvetica Neue", Helvetica;

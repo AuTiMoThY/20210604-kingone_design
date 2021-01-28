@@ -1,0 +1,55 @@
+.slick-dots {
+	list-style: none;
+	padding-left: 0;
+	margin-bottom: 0;
+	@include cf;
+
+	li {
+		float: left;
+
+		// @include circle(15);
+
+		&:not(:first-of-type) {
+			padding-left: 1rem;
+		}
+
+		&.slick-active {
+			button {
+				background-color: theme-color('primary1');
+				border-color: theme-color('primary1');
+				&:after {
+					opacity: 0;
+				}
+			}
+		}
+	}
+
+	button {
+		position: relative;
+		@include circle(15);
+		border: 1px solid #1C1D20;
+		background-color: transparent;
+		@include hide_txt;
+		padding: 0;
+
+		cursor: pointer;
+
+		transition: all 0.3s $easeInOutCubic3;
+
+		&:after {
+			@include psudoClass;
+			@include absolute(0, $L:0);
+			@include circle(15);
+			background-color: #fff;
+			opacity: 0.5;
+
+			transition: all 0.3s $easeInOutCubic3;
+		}
+
+		&:hover {
+			&:after {
+				opacity: 1;
+			}
+		}
+	}
+}

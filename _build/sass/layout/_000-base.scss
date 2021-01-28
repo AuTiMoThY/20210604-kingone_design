@@ -1,0 +1,30 @@
+.body_wrap {
+	min-height: 100vh;
+	overflow: hidden;
+}
+
+// .m_mask {
+// 	@include wh;
+// 	@include fixed(0, $L:0);
+// 	z-index: 10;
+// 	background-color: #fff;
+// 	opacity: 0.5;
+// 	display: none;
+// 	.js-show-mmenu & {
+// 		display: block;
+// 	}
+// }
+
+.page_wrap {
+	display: block;
+	padding-top: $header_h * 1px;
+}
+
+
+.container-fluid {
+	padding-left: 2rem;
+	padding-right: 2rem;
+
+	max-width: 1720px;
+}
+

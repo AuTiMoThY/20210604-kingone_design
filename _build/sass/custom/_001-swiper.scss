@@ -1,0 +1,38 @@
+.inni-swiper-nav {
+	@include absolute(50%);
+	margin-top: 25 / 2 * -1px;
+	z-index: 2;
+	@include circle(25);
+	background-color: #DFDFDF;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	transition: $transition-base;
+
+	&.swiper-button-disabled {
+		opacity: 0.5;
+	}
+
+	.icon_block {
+		color: #fff;
+	}
+
+	&:hover {
+		background-color: darken(#DFDFDF, 30);
+	}
+}
+
+
+.inni-swiper-prev {
+	left: 0;
+}
+
+.inni-swiper-next {
+	right: 0;
+
+	.icon_block {
+		transform: rotate(180deg);
+	}
+}

@@ -1,0 +1,176 @@
+$pag-default-color: #231815;
+$pag-active-color: #fff;
+
+.#{$project_name}_pagination {
+	padding: 50px 0;
+	display: flex;
+	justify-content: center;
+
+	> .inner {
+		display: flex;
+	}
+
+
+	.pagination-list {
+		margin-left: 0.8rem;
+		@include media-breakpoint-down(xs) {
+			margin-left: 0;
+		}
+		.pagination-btn {
+			float: left;
+			&:not(:first-of-type) {
+				margin-left: 0.8rem;
+			}
+
+		}
+	}
+
+	.ex {
+		.svg_icon {
+			@include wh(14, 12);
+		}
+	}
+
+	.base {
+		.svg_icon {
+			@include wh(7, 12);
+		}
+	}
+
+	.pagination-prev {
+		display: flex;
+
+
+		.ex {
+			margin-right: 0.8rem;
+			// @include media-breakpoint-down(xs) {
+			// 	margin-left: 0;
+			// }
+		}
+	}
+
+	.pagination-next {
+		display: flex;
+		margin-left: 0.8rem;
+		@include media-breakpoint-down(xs) {
+			margin-left: 0;
+		}
+
+		.ex {
+			margin-left: 0.8rem;
+		}
+		.svg_icon {
+			transform: rotate(180deg);
+		}
+	}
+
+
+
+	@include media-breakpoint-down(xs) {
+
+		> .inner {
+			display: grid;
+			grid-template-columns: 50% 50%;
+			grid-template-areas: "list list"
+			"prev next";
+
+			// display: flex;
+			// flex-wrap: wrap;
+		}
+
+		.pagination-list {
+			// order: 0;
+			// flex: 1 1 100%;
+			grid-area: list;
+
+			margin-bottom: 0.6rem;
+		}
+
+		.pagination-prev {
+			// order: 2;
+			grid-area: prev;
+		}
+		.pagination-next {
+			// order: 3;
+			grid-area: next;
+			justify-self: self-end;
+		}
+
+	}
+
+}
+
+
+// 按鈕樣式
+.#{$project_name}_pagination {
+	.pagination-prev, .pagination-next {
+		.pagination-btn {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			@include circle(40);
+			background-color: rgba(#3E3A39, 0);
+			border: none;
+			// border: 1px solid #CBCBCB;
+			color: $pag-default-color;
+
+			transition: $transition-base;
+
+			@include media-breakpoint-down(xs) {
+				@include wh(35);
+			}
+
+
+			.svg_icon {
+				fill: currentColor;
+			}
+
+			&:not([disable]) {
+				cursor: pointer;
+				&:hover {
+					background-color: rgba(#3E3A39, 1);
+					// border: 1px solid $pag-default-color;
+					color: $pag-active-color;
+				}
+			}
+
+
+			&[disable] {
+				color: #9E9E9F;
+			}
+		}
+	}
+	.pagination-next {}
+
+	.pagination-list {
+		.pagination-btn {
+			> .inner {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				@include circle(40);
+				background-color: rgba(#3E3A39, 0);
+				box-shadow: 0 0 5px rgba(#3E3A39, 0);
+				color: $pag-default-color;
+
+				transition: $transition-base;
+
+				@include media-breakpoint-down(xs) {
+					@include wh(35);
+				}
+
+				&:hover {
+					background-color: rgba(#3E3A39, 0.5);
+					box-shadow: 0 0 5px rgba(#3E3A39, 0.3);
+					color: $pag-active-color;
+				}
+
+				&.js-active {
+					background-color: rgba(#3E3A39, 1);
+					// border: 1px solid $pag-default-color;
+					color: $pag-active-color;
+				}
+			}
+		}
+	}
+}

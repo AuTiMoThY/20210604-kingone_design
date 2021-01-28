@@ -1,0 +1,44 @@
+.page_aside {
+
+
+}
+
+.web_nav {
+	position: fixed;
+	color: #fff;
+
+
+	&-item {
+		a {
+			display: flex;
+			align-items: center;
+			padding: 0.8rem 1rem;
+			background-color: transparent;
+			border-radius: 5px;
+			color: currentColor;
+			font-size: 15px;
+
+			&:hover {
+				background-color: #fff;
+				color: #000;
+			}
+		}
+
+		.txt {
+			margin-left: 1rem;
+		}
+
+		&.js-highlight {
+			a {
+				background-color: #fff;
+				color: #000;
+			}
+		}
+
+		.icon_block {
+			@include wh(25);
+		}
+	}
+
+
+}

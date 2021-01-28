@@ -1,0 +1,42 @@
+$block_w: 65;
+$block_h: 32;
+$inner_size: 24;
+
+
+.#{$project_name}_switch {
+	position: relative;
+	@include wh($block_w, $block_h);
+	border-radius: #{$block_h}px;
+	background-color: #F4F4F4;
+	box-shadow: inset 0 0 1px rgba(#000, 0.05);
+
+	transition: $transition-base;
+	cursor: pointer;
+
+	&:before {
+		@include psudoClass;
+		@include absolute(#{($block_h - $inner_size) / 2}px, $L:#{($block_h - $inner_size) / 2}px);
+		@include circle($inner_size);
+		box-shadow: 1px 1px 1px rgba(#000, 0.15);
+		background-color: #79BC28;
+		transition: $transition-base;
+	}
+
+
+	&.status-open {
+		// background-color: #97ABBD;
+
+		&:before {
+			// right: unset;
+			// left: 2px;
+		}
+	}
+	&.status-close {
+		// background-color: #97ABBD;
+
+		&:before {
+			background-color: #B22A2A;
+			left: #{65 - (($block_h - $inner_size) / 2 + $inner_size)}px;
+		}
+	}
+}

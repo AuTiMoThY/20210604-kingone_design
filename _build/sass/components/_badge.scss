@@ -1,0 +1,10 @@
+.#{$project_name}_badge {
+	display: block;
+	@include circle(15);
+	line-height: 15px;
+	background-color: color("orange");
+	text-align: center;
+	color: #fff;
+	font-size: 12px;
+	font-weight: bold;
+}

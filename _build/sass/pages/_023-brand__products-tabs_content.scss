@@ -1,0 +1,20 @@
+.brand__products-tabs_content {
+	.pdt-list {
+		display: grid;
+		// grid-template-columns: repeat(5, 20%);
+		// grid-gap: 30px;
+		// margin-right: -15px;
+		// margin-left: -15px;
+
+		grid-template-columns: repeat(5, 1fr);
+		grid-auto-columns: 20%;
+		grid-gap: 30px;
+	}
+
+
+	.pdt-item {
+		// padding-left: 15px;
+		// padding-right: 15px;
+		// margin-bottom: 1.5rem;
+	}
+}

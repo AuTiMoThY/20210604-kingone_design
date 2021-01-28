@@ -1,0 +1,78 @@
+.#{$project_name}_btn {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 50px;
+	border-radius: 5px;
+	border: none;
+	background-color: #3E3A39;
+	padding: 0 3rem;
+	cursor: pointer;
+
+	box-shadow: 0 0 0 rgba(#000, 0);
+	color: #fff;
+	transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out, color 0.3s ease-in-out;
+
+	&:hover {
+		box-shadow: $boxShadowHover1;
+	}
+
+	.icon {
+		+ .txt {
+			margin-left: 0.6rem;
+		}
+	}
+	.txt {
+
+	}
+
+	&:active {
+		transform: translate(1px, 1px);
+		box-shadow: $boxShadowActive1;
+	}
+
+
+	&-default {
+		@include btn_setting(#3E3A39, #fff);
+	}
+
+	&-orange {
+		@include btn_setting(#EB663D, #fff);
+	}
+
+	&-blue {
+		@include btn_setting(#1D2974, #fff);
+	}
+
+	&-gray {
+		@include btn_setting(#716C6B, #fff);
+	}
+
+	// &-purple {
+	// 	@include linear-gradient(to bottom right, #c89feb, #5d69be);
+	// 	color: lighten(#5d69be, 40);
+
+	// 	&:hover {
+	// 		@include linear-gradient(to bottom right, darken(#c89feb, 15), darken(#5d69be, 15));
+	// 		color: lighten(#5d69be, 50);
+	// 	}
+	// }
+	// &-green {
+	// 	@include linear-gradient(to bottom right, $green-lighten-1, $green-darken-4);
+	// 	color: $green-lighten-4;
+
+	// 	&:hover {
+	// 		@include linear-gradient(to bottom right, darken($green-lighten-1, 15), darken($green-darken-4, 15));
+	// 		color: $green-lighten-5;
+	// 	}
+	// }
+	// &-red {
+	// 	@include linear-gradient(to bottom right, $red-lighten-1, $red-darken-4);
+	// 	color: $red-lighten-4;
+
+	// 	&:hover {
+	// 		@include linear-gradient(to bottom right, darken($red-lighten-1, 15), darken($red-darken-4, 15));
+	// 		color: $red-lighten-5;
+	// 	}
+	// }
+}

@@ -1,0 +1,25 @@
+.#{$project_name} {
+	&_info {
+		padding: 1.3rem 2.5rem;
+		margin-bottom: 30px;
+		background-color: color("b1");
+		border-radius: 5px;
+		color: #231815;
+
+		p {
+			margin-bottom: 0;
+		}
+
+		&-section {
+			&:not(:first-of-type) {
+				margin-top: 1.6rem;
+			}
+		}
+
+		&-title {
+			color: #27B292;
+			@include remCalc(font-size, 18);
+		}
+
+	}
+}

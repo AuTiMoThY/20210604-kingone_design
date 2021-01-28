@@ -1,0 +1,91 @@
+
+.hello_member {
+	position: relative;
+	border-radius: 5px;
+	padding: 0.25rem 0.5rem;
+	background-color: transparent;
+	transition: $transition-base;
+
+	&:hover {
+		background-color: $hover_color;
+
+		.hello_member-dropdown {
+			display: block;
+
+			animation-name: fadeIn;
+			animation-duration: 0.3s;
+			animation-fill-mode: forwards;
+			animation-timing-function: $easing3;
+
+		}
+	}
+
+	cursor: pointer;
+
+	&-dropdown {
+		@include absolute(100%, $L:0);
+		z-index: 20;
+		width: 165px;
+		padding-top: 30px;
+		opacity: 0;
+		display: none;
+		transition: $transition-base;
+		ul {
+			width: 100%;
+			background-color: #fff;
+			padding: 0.5rem;
+			border-radius: 5px;
+			box-shadow: 2px 2px 5px rgba(#231815, 0.2);
+			color: #686969;
+
+			&:before {
+				content: "▲";
+				color: #fff;
+				// @include psudoClass;
+				@include absolute(-18px + 30, $L:50%);
+				transform: translateX(-50%) scaleX(1.5);
+				text-shadow: 2px -2px 3px rgba(#231815, 0.2);
+				// @include triangle('top', #fff, 18px);
+			}
+
+			&:after {
+				@include psudoClass;
+				@include wh(100%, 0.5rem);
+				background-color: #fff;
+				@include absolute(0 + 30px, $L:0);
+			}
+		}
+
+	}
+}
+
+
+.hello_member-dropdown-item {
+	position: relative;
+	.inni_badge {
+		@include absolute(50%, 0.5rem);
+		transform: translateY(-50%);
+	}
+	> .inner {
+		display: flex;
+		align-items: center;
+
+		padding: 0.8rem 1.2rem;
+		background-color: #fff;
+		border-radius: 5px;
+		text-align: center;
+
+		transition: $transition-base;
+
+		&:hover {
+			background-color: $light-blue-50;
+		}
+	}
+
+	.icon_block {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		@include wh(20);
+	}
+}

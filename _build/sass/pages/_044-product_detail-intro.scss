@@ -1,0 +1,56 @@
+.product_detail-intro {
+
+}
+
+.product_detail-name {
+	position: relative;
+	padding-bottom: 30px;
+	margin-bottom: 30px;
+
+	&:after {
+		@include psudoClass;
+		@include absolute($B:0);
+		@include wh(35, 1);
+		background-color: #3E3A39;
+	}
+	.extra-txt {
+		color: #EB663D;
+		@include remCalc(font-size, 40);
+	}
+
+	.name-txt {
+		color: #231815;
+		@include remCalc(font-size, 50);
+	}
+}
+
+.product_detail-description {
+	.title {
+		margin-bottom: 1.2rem;
+		color: #414544;
+		@include remCalc(font-size, 18);
+	}
+
+	.cnt {
+		margin-bottom: 35px;
+		color: #414544;
+	}
+
+	.extra-desc {
+		display: table;
+
+		.inner {
+			display: flex;
+			align-items: center;
+		}
+
+		.icon_block {
+			margin-right: 0.5rem;
+		}
+
+		.txt {
+			text-decoration: underline;
+			@include remCalc(font-size, 14);
+		}
+	}
+}

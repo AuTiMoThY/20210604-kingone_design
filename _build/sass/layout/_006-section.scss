@@ -1,0 +1,19 @@
+.section_row {
+	padding-top: 75px;
+}
+
+.section_row-title {
+	padding: 0.8rem 0;
+	border-bottom: 1px solid #231815;
+
+	color: #3E3A39;
+	@include remCalc(font-size, 30);
+
+	.tw {
+		margin-right: 0.8rem;
+	}
+
+	&.page_title {
+		padding-bottom: 1.875rem;
+	}
+}

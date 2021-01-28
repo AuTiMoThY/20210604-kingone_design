@@ -1,0 +1,30 @@
+@mixin hover_line($type, $color) {
+	@if $type == 1 {
+		transition: all 0.3s $easeInOutCubic;
+		border-bottom: 1px solid rgba($color, 0);
+		&:hover {
+			border-bottom: 1px solid rgba($color, 1);
+		}
+		&:active {
+			@include hover;
+		}
+	} @else if $type == 2 {
+		position: relative;
+		&:after {
+			@include psudoClass;
+			@include absolute($B:-3px, $L:0, $R:0);
+			@include wh(0%, 1);
+			@include bg(rgba($color, 0));
+			margin: auto;
+			transition: all 0.3s $easeInOutCubic;
+		}
+		&:hover {
+			&:after {
+				width: 100%;
+				@include bg(rgba($color, 1));
+			}
+		}
+	} @else {
+		
+	}
+}

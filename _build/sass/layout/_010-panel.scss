@@ -1,0 +1,17 @@
+.#{$project_name} {
+	&_panel {
+		background-color: #fff;
+		border-radius: 15px;
+		box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.05);
+
+		&-title {
+			@include remCalc(font-size, 20);
+			font-weight: normal;
+			// text-align: center;
+		}
+
+		&-bd {
+			padding: 1.5rem;
+		}
+	}
+}

@@ -1,0 +1,30 @@
+$label_width: 90;
+.signup_frm {
+	> .inner {
+		padding: 0 1rem;
+	}
+
+	.inni_frm-label {
+		flex: 0 0 #{$label_width}px;
+	}
+
+	.inni_frm-field {
+		flex: 0 0 calc(100% - #{$label_width}px);
+	}
+
+	.inni_frm-error {
+		// flex: 1 1 100%;
+		left: $label_width + 20 * 1px;
+	}
+}
+
+.signup_frm {
+	.inni_frm-label {
+		position: relative;
+		text-align-last: left;
+	}
+
+	.inni_required-mark {
+		@include absolute($L:-0.8rem);
+	}
+}

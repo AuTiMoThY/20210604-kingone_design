@@ -1,0 +1,65 @@
+//========================================================================*\
+//	>	text
+//========================================================================*/
+@mixin hide_txt() {
+	text-indent: -9999px;
+	white-space: nowrap;
+	overflow: hidden;
+	display: block;
+}
+@mixin ellipsis($width: 100%) {
+  display: inline-block;
+  max-width: $width;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  word-wrap: normal;
+}
+@mixin text_ellipsis($line, $lineHeight) {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: $line; /* 顯示行數 Chrome&Safari */
+  max-height : calc(1em * #{$lineHeight} * #{$line});  /* 顯示高度 IE&Firefox */
+  overflow : hidden;
+  text-overflow : ellipsis;
+  word-break: break-word;
+
+  &:after {
+    content    : '...';
+    text-align : right;
+    bottom     : 0;
+    right      : 0;
+    width      : 25%;
+    display    : block;
+    position   : absolute;
+    height     : calc(1em * #{$lineHeight});
+    background : linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1) 75%);
+  }
+
+  @supports (-webkit-line-clamp: $line) {
+    &:after {
+      display: none;
+    }
+  }
+}
+@mixin adjFont($to-size, $font-weight:normal, $lines: auto, $from-size: $base-font-size) {
+	@include adjust-font-size-to($to-size, $lines, $from-size);
+	font-weight: $font-weight;
+}
+@mixin adjFontSize($to-size, $lines: auto, $from-size: $base-font-size) {
+	@include adjust-font-size-to($to-size, $lines, $from-size);
+}
+
+$browser-context: 16;
+@function em($pixels, $context: $browser-context) {
+  @if (unitless($pixels)) {
+    $pixels: $pixels * 1px;
+  }
+
+  @if (unitless($context)) {
+    $context: $context * 1px;
+  }
+
+  @return $pixels / $context * 1em;
+}

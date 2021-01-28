@@ -1,0 +1,30 @@
+.news_detail-title {
+
+	&-hd {
+		display: flex;
+		align-items: center;
+		font-weight: normal;
+		margin-bottom: 0.6rem;
+
+
+		.news-cate {
+			@include remCalc(font-size, 18px);
+		}
+
+		.news-date {
+			@include remCalc(font-size, 20px);
+			color: #3E3A39;
+		}
+	}
+
+
+	&-bd {
+		@include remCalc(font-size, 30px);
+	}
+}
+
+
+.news_detail-container {
+	padding-top: 60px;
+	padding-bottom: 60px;
+}

@@ -1,0 +1,19 @@
+.#{$project_name}_loading {
+	@include fixed(0, $L:0);
+	z-index: 999;
+	@include wh(100vw, 100vh);
+	background-color: rgba(#fff, 0.5);
+	transform-origin: center center;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	.loader-inner {
+
+	}
+
+	.ball-spin-fade-loader > div {
+		background-color: #1D2974;
+	}
+}

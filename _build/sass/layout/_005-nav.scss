@@ -1,0 +1,36 @@
+.page_nav {
+	ul {
+		display: flex;
+	}
+
+	&-item {
+		padding: 0 25px;
+		> .inner {
+			position: relative;
+			display: block;
+			padding: 2px;
+
+		    word-break: keep-all;
+
+		    &:after {
+		    	@include psudoClass;
+		    	@include wh(0%, 2);
+		    	@include absolute($L:50%, $B:-2px);
+		    	transform: translateX(-50%);
+		    	background-color: #3E3A39;
+		    	opacity: 0;
+		    	transition: $transition-base;
+		    }
+
+			&:hover {
+				font-weight: bold;
+				color: #3E3A39;
+
+				&:after {
+					width: 100%;
+					opacity: 1;
+				}
+			}
+		}
+	}
+}

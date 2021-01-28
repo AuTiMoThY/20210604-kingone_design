@@ -1,0 +1,31 @@
+.product_detail {
+	&-hd {
+		display: grid;
+		grid-template-columns: percentage(610 / 1720) percentage((1720 - 610) / 1720);
+	}
+	&-bd {
+		
+	}
+
+	&-intro {
+		padding-left: percentage(106 / 1107);
+	}
+}
+
+.product_detail-pic {
+	.pic {
+		border-bottom-right-radius: 30px;
+	}
+}
+
+
+.product_detail-color {
+	padding-top: 55px;
+}
+
+.product_detail-content {
+	padding-top: 20px;
+	.content__row {
+		margin-bottom: 100px;
+	}
+}

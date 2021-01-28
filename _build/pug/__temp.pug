@@ -1,0 +1,36 @@
+extends _layout.pug
+block vars
+	- var page_class = "_page ";
+	- var page_title = "熱銷商品";
+
+
+block pluginStyle
+	//- link(rel="stylesheet", href="dist/plugin/swiper/swiper.min.css")
+
+block popup
+
+block content
+	.page_wrap(class=page_class)
+		//- .m_mask
+		// =========================================================================
+		// main._page  START
+		main._page-wrap
+			.container-fluid
+				h2.news_detail-title
+					// data-cate : 類別
+					// 1 = 公告
+					// 2 = 活動
+					// 3 = 新品
+					.news_detail-title-hd(data-cate="3")
+						.news-cate 新品
+						.news-date 2020-05-18
+					.news_detail-title-bd
+						.txt Stedman新品上市
+
+
+		// main._page  END  !!
+		// =========================================================================
+
+block page_script
+	script(src="public/js/page/.js")
+
