@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html class="no-js" lang="zh">
+<html lang="zh-Hant">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>登入 | Template</title>
+    <title>demo | video more</title>
     <meta name="keywords" content="">
     <meta name="description" content="">
     <meta name="robots" content="index,follow">
@@ -12,7 +12,9 @@
     <meta name="format-detection" content="telephone=no">
     <!-- Font Awesome-->
     <script src="public/fontawesome/js/all.js" defer></script>
-    <link rel="stylesheet" href="public/css/style.css?v=20200813">
+    <link rel="stylesheet" href="public/plugins/simplebar/simplebar.css">
+    <link rel="stylesheet" href="public/plugins/swiper/swiper-bundle.css">
+    <link rel="stylesheet" href="public/css/style.css?v=20201208">
     <!-- js-->
     <script src="public/js/libs/modernizr-custom.min.js"></script>
     <script src="public/js/ModernizrAu.js"></script>
@@ -29,79 +31,332 @@
     <!-- =========================================================================-->
     <!-- .body_wrap  START-->
     <div class="body_wrap">
-      <!-- =========================================================================-->
-      <!-- 頁面內容  START-->
-      <!-- =========================================================================-->
-      <div class="page_wrap login_page">
-        <div class="m_mask"></div>
-        <header class="login_page-header">
-          <div class="container-fluid inner"><a class="logo_block" href=""><img src="public/images/logo.svg" alt="logo"></a></div>
-        </header>
-        <!-- =========================================================================-->
-        <!-- main.page_main  START-->
-        <main class="page_main login_page-main">
-          <div class="container inner">
-            <div class="bblens_frm login_frm">
-              <h2 class="login_frm-title">客戶登入</h2>
-              <form action="home.html">
-                <div class="form-group row user_no">
-                  <div class="col-12">
-                    <label class="bblens_frm-label login_frm-label" for="userNo">客戶編號</label>
-                  </div>
-                  <div class="col-12 bblens_frm-field">
-                    <input class="bblens_frm-input login_frm-input" type="text" id="userNo">
-                  </div>
-                  <div class="col-12 bblens_frm-error" data-field="no"></div>
-                </div>
-                <div class="form-group row user_pw">
-                  <div class="col-12">
-                    <label class="bblens_frm-label login_frm-label" for="userPw">密碼</label>
-                  </div>
-                  <div class="col-12 bblens_frm-field">
-                    <input class="bblens_frm-input login_frm-input" type="password" id="userPw">
-                  </div>
-                  <div class="col-12 bblens_frm-error" data-field="pw"></div>
-                </div>
-                <div class="form-group row validation_code">
-                  <div class="col-12">
-                    <label class="bblens_frm-label login_frm-label" for="verCode">驗證碼</label>
-                  </div>
-                  <div class="col-12 bblens_frm-field validation_code-field">
-                    <div class="validation_code-input">
-                      <input class="bblens_frm-input login_frm-input" type="text" id="verCode">
-                    </div>
-                    <div class="validation_code-pic"><img src="public/images/validation_code.jpg" alt=""></div>
-                    <button class="validation_code-reset" type="button">
-                      <svg class="svg_icon icon-reset">
-                        <use xlink:href="#icon-reset"></use>
+      <header class="page_header">
+        <div class="container-fluid inner">
+          <div class="page_header-left">
+            <div class="inni_frm__search">
+              <form class="inner">
+                <div class="inni_frm-field">
+                  <input class="inni_frm-input inni_frm__search-input" type="search" placeholder="SEARCH">
+                  <button class="inni_frm__search-btn" type="button">
+                    <div class="icon_block icon-search svg-icon-search-dims">
+                      <svg class="svg_icon">
+                        <use xlink:href="#icon-search"></use>
                       </svg>
-                    </button>
-                  </div>
-                  <div class="col-12 bblens_frm-error" data-field="vercode"></div>
-                </div>
-                <div class="form-group login_frm-btns">
-                  <button class="bblens_btn bblens_btn-blue login_frm-submit" type="button">登入</button>
+                    </div>
+                  </button>
                 </div>
               </form>
             </div>
-            <div class="login_page-pic">
-              <div class="pic"><img src="public/images/login_pic.jpg" alt=""></div>
+          </div>
+          <div class="page_header-center">
+            <nav class="page_nav page_nav-left">
+              <ul class="cf lis-n">
+                <li class="page_nav-item"><a class="inner" href="product-list.html">熱銷商品</a></li>
+                <li class="page_nav-item"><a class="inner" href="product-list2.html">精選商品</a></li>
+              </ul>
+            </nav><a class="web_logo" href="./" title="INNI愛力國際 首頁" aria-label="INNI愛力國際 首頁">
+              <h1 class="inner hide_txt">INNI愛力國際【買衣服找愛力】GILDAN吉爾登台灣總代理</h1><img src="public/images/INNI-logo.svg" alt="INNI愛力國際"></a>
+            <nav class="page_nav page_nav-right">
+              <ul class="cf lis-n">
+                <li class="page_nav-item"><a class="inner" href="">促銷活動</a></li>
+                <li class="page_nav-item"><a class="inner" href="">下載專區</a></li>
+              </ul>
+            </nav>
+          </div>
+          <div class="page_header-right">
+            <div class="mbr_info">
+              <ul class="cf lis-n">
+                <li class="mbr_info-item">
+                  <button class="inner sign_in_out" type="button" data-popup="popupSignInSignUp">
+                    <div class="icon_block icon-user svg-icon-user-dims">
+                      <svg class="svg_icon">
+                        <use xlink:href="#icon-user"></use>
+                      </svg>
+                    </div><span class="txt">登出 | 註冊</span>
+                  </button>
+                </li>
+                <li class="mbr_info-item">
+                  <button class="inner cart" type="button">
+                    <div class="icon_block icon-cart svg-icon-cart-dims">
+                      <svg class="svg_icon">
+                        <use xlink:href="#icon-cart"></use>
+                      </svg><span class="inni_badge">3</span>
+                    </div>購物車
+                  </button>
+                </li>
+              </ul>
             </div>
           </div>
-        </main>
-        <!-- main.page_main  END  !!-->
+        </div>
+        <div class="m_menu" id="m_menu">
+          <div class="group">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+            <div class="line4"></div>
+          </div>
+        </div>
+      </header>
+      <!-- header.page_header  END  !! --------------------------------------------------------------------------->
+      <!-- =========================================================================-->
+      <!-- 頁面內容  START-->
+      <!-- =========================================================================-->
+      <div class="page_wrap home_page">
+        <!-- =========================================================================-->
+        <!--   START-->
+        <!--   END  !!-->
         <!-- =========================================================================-->
       </div>
       <!-- =========================================================================-->
       <!-- 頁面內容  END  !!-->
       <!-- =========================================================================-->
+      <footer class="page_footer">
+        <div class="container-fluid inner">
+          <div class="page_footer-top">
+            <div class="footer-logo">
+              <div class="logo"><img src="public/images/INNI-logo.svg" alt="INNI愛力國際"></div>
+              <div class="social">
+                <ul class="cf lis-n">
+                  <li class="social-item"><a class="inner" href="https://www.gildan.com.tw" target="_blank" title="另開視窗:GILDAN 官網">
+                      <div class="icon_block icon-web svg-icon-web-dims">
+                        <svg class="svg_icon">
+                          <use xlink:href="#icon-web"></use>
+                        </svg>
+                      </div></a></li>
+                  <li class="social-item"><a class="inner" href="https://www.facebook.com/innigildan/" target="_blank" title="另開視窗:愛力國際 Gildan台灣總代理 facebook 粉絲專頁">
+                      <div class="icon_block icon-facebook svg-icon-facebook-dims">
+                        <svg class="svg_icon">
+                          <use xlink:href="#icon-facebook"></use>
+                        </svg>
+                      </div></a></li>
+                  <li class="social-item"><a class="inner" href="https://line.me/R/ti/p/%40dmy4038n" target="_blank" title="另開視窗:加入LINE">
+                      <div class="icon_block icon-line svg-icon-line-dims">
+                        <svg class="svg_icon">
+                          <use xlink:href="#icon-line"></use>
+                        </svg>
+                      </div></a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="contact">
+              <h3 class="footer-title">聯絡資訊</h3>
+              <div class="contact-list">
+                <ul class="cf lis-n">
+                  <li class="contact-txt"><span class="title">服務專線：</span><span class="txt">02-26089896</span></li>
+                  <li class="contact-txt"><span class="title">傳真專線：</span><span class="txt">02-26002192</span></li>
+                  <li class="contact-txt"><span class="title">電子信箱：</span><span class="txt">service@inni.com.tw</span></li>
+                </ul>
+                <ul class="cf lis-n">
+                  <li class="contact-txt"><span class="title">服務地址：</span><span class="txt">244新北市林口區南勢二街68號</span></li>
+                  <li class="contact-txt"><span class="title">服務時間：</span><span class="txt">周一至周五 早上 9:00 到 晚上 6:00</span></li>
+                  <li class="contact-txt">E-mail 與 LINE 客服 訊息於工作日盡快回覆您</li>
+                </ul>
+              </div>
+            </div>
+            <div class="sitemap">
+              <div class="sitemap-list">
+                <h3 class="footer-title">商品資訊</h3>
+                <ul class="cf lis-n">
+                  <li class="sitemap-item"><a class="inner" href="product-list.html" title="熱銷現貨">熱銷現貨</a></li>
+                  <li class="sitemap-item"><a class="inner" href="product-list2.html" title="精選商品">精選商品</a></li>
+                </ul>
+              </div>
+              <div class="sitemap-list">
+                <h3 class="footer-title">活動消息</h3>
+                <ul class="cf lis-n">
+                  <li class="sitemap-item"><a class="inner" href="event.html" title="促銷活動">促銷活動</a></li>
+                  <li class="sitemap-item"><a class="inner" href="news-list.html" title="最新消息">最新消息</a></li>
+                </ul>
+              </div>
+              <div class="sitemap-list">
+                <h3 class="footer-title">個人中心</h3>
+                <ul class="cf lis-n">
+                  <li class="sitemap-item"><a class="inner" href="mbr-notice.html" title="貨到通知">貨到通知</a></li>
+                  <li class="sitemap-item"><a class="inner" href="order-list.html" title="訂單資訊">訂單資訊</a></li>
+                  <li class="sitemap-item"><a class="inner" href="mbr-info.html" title="帳號管理">帳號管理</a></li>
+                  <li class="sitemap-item"><a class="inner" href="cart-list.html" title="購物車">購物車</a></li>
+                </ul>
+              </div>
+              <div class="sitemap-list">
+                <h3 class="footer-title">關於INNI</h3>
+                <ul class="cf lis-n">
+                  <li class="sitemap-item"><a class="inner" href="brand.html" title="品牌館">品牌館</a></li>
+                  <li class="sitemap-item"><a class="inner" href="order-faq.html" title="購物須知">購物須知</a></li>
+                  <li class="sitemap-item"><a class="inner" href="faq.html" title="常見問題">常見問題</a></li>
+                  <li class="sitemap-item"><a class="inner" href="download.html" title="下載專區">下載專區</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="page_footer-bottom">
+            <div class="copyright">
+              <div class="txt">INNI All Rights Reserved © 2020</div>
+            </div>
+          </div>
+        </div>
+      </footer>
     </div>
+    <!-- =========================================================================-->
     <!-- 彈出視窗 / 通知-->
+    <!-- =========================================================================-->
+    <!-- 登入 / 註冊 --------------------------------------------------------------->
+    <div class="inni_popup inni_popup-sign_in_sign_up" id="popupSignInSignUp">
+      <div class="inni_popup-bg"></div>
+      <div class="inni_popup-wrap">
+        <div class="inni_popup-close" onclick="inniPopup.closethis(this)">
+          <div class="icon"></div>
+        </div>
+        <div class="inni_popup-container" data-simplebar data-simplebar-auto-hide="false">
+          <div class="container-inner">
+            <div class="sign_in">
+              <div class="inni_popup-hd">
+                <h2 class="title mb-3">會員登入</h2>
+              </div>
+              <div class="inni_popup-bd">
+                <div class="inni_frm signin_frm">
+                  <form class="inner" action="index-login.html" id="signinFrm">
+                    <div class="form-group gui_number">
+                      <div class="row no-gutters konodioda">
+                        <label class="inni_frm-label signin_frm-label" for="guiNumber">統編</label>
+                        <div class="inni_frm-field">
+                          <input class="inni_frm-input signin_frm-input" type="text" placeholder="請輸入註冊帳號" id="guiNumber">
+                        </div>
+                      </div>
+                      <div class="row no-gutters">
+                        <div class="inni_frm-error" data-error-field="guinumber"></div>
+                      </div>
+                    </div>
+                    <div class="form-group user_id">
+                      <div class="row no-gutters konodioda">
+                        <label class="inni_frm-label signin_frm-label" for="userId">帳號</label>
+                        <div class="inni_frm-field">
+                          <input class="inni_frm-input signin_frm-input" type="text" placeholder="請輸入帳號" id="userId">
+                        </div>
+                      </div>
+                      <div class="row no-gutters">
+                        <div class="inni_frm-error" data-error-field="id"></div>
+                      </div>
+                    </div>
+                    <div class="form-group user_pw">
+                      <div class="row no-gutters konodioda">
+                        <label class="inni_frm-label signin_frm-label" for="userPw">密碼</label>
+                        <div class="inni_frm-field">
+                          <input class="inni_frm-input signin_frm-input" type="password" placeholder="請輸入密碼" id="userPw">
+                        </div>
+                      </div>
+                      <div class="row no-gutters">
+                        <div class="inni_frm-error" data-error-field="pw"></div>
+                      </div>
+                    </div>
+                    <div class="form-group validation_code mb-4">
+                      <div class="row no-gutters konodioda">
+                        <label class="inni_frm-label signin_frm-label" for="verCode">驗證碼</label>
+                        <div class="inni_frm-field validation_code-field">
+                          <div class="validation_code-input">
+                            <input class="inni_frm-input signin_frm-input" type="text" placeholder="請輸入驗證碼" id="verCode">
+                          </div>
+                          <div class="validation_code-pic"><img src="public/images/temp/validation_code.jpg" alt=""></div>
+                          <button class="validation_code-reset" type="button">
+                            <svg class="svg_icon icon-reset">
+                              <use xlink:href="#icon-reset"></use>
+                            </svg>
+                          </button>
+                        </div>
+                      </div>
+                      <div class="row no-gutters">
+                        <div class="inni_frm-error" data-error-field="vercode"></div>
+                      </div>
+                    </div>
+                    <div class="form-group signin_frm-btns">
+                      <button class="inni_btn inni_btn-orange signin_frm-submit" type="button">登入</button>
+                    </div>
+                    <div class="form-group signin_frm-ft mb-0 d-flex justify-content-between">
+                      <div class="remember_me">
+                        <div class="inni_rcx">
+                          <label class="inni_rcx-label" for="rememberMe">
+                            <input class="inni_rcx-input" id="rememberMe" type="checkbox" name="rememberMe">
+                            <div class="choicemark"></div>
+                            <div class="txt">記住我的帳號</div>
+                          </label>
+                        </div>
+                      </div>
+                      <div class="forget_pw"><a class="txt" href="javascript:;" title="忘記密碼" data-popup="popupForgetPw">忘記密碼</a></div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+            <div class="sign_up">
+              <div class="inni_popup-hd">
+                <h2 class="title mb-3">首次客戶使用</h2>
+              </div>
+              <div class="inni_popup-bd">
+                <div class="sign_up-inner">
+                  <p>＊註冊會員可享受流暢購物。</p>
+                  <p>＊可查詢歷史訂單紀錄、貨到通知及帳號管理。</p>
+                  <p>＊歡迎您加入愛力INNI會員。</p>
+                </div>
+                <div class="sign_up-btns"><a class="inni_btn inni_btn-default" href="sign-up.html">會員註冊</a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- 忘記密碼 --------------------------------------------------------------->
+    <div class="inni_popup inni_popup-forget_pw" id="popupForgetPw">
+      <div class="inni_popup-bg"></div>
+      <div class="inni_popup-wrap">
+        <div class="inni_popup-close" onclick="inniPopup.closethis(this)">
+          <div class="icon"></div>
+        </div>
+        <div class="inni_popup-container" data-simplebar data-simplebar-auto-hide="false">
+          <div class="container-inner">
+            <div class="inni_popup-hd">
+              <h2 class="title mb-3">忘記密碼</h2>
+            </div>
+            <div class="inni_popup-bd">
+              <div class="inni_frm forget_pw_frm">
+                <form class="inner" action="index-login.html" id="forgetPwFrm">
+                  <div class="form-group signup_id">
+                    <div class="row no-gutters konodioda">
+                      <label class="inni_frm-label forget_pw_frm-label" for="signupId">註冊帳號</label>
+                      <div class="inni_frm-field">
+                        <input class="inni_frm-input forget_pw_frm-input" type="text" placeholder="請輸入註冊帳號" id="signupId">
+                      </div>
+                    </div>
+                    <div class="row no-gutters">
+                      <div class="inni_frm-error" data-error-field="signupid"></div>
+                    </div>
+                  </div>
+                  <div class="form-group email mb-4">
+                    <div class="row no-gutters konodioda">
+                      <label class="inni_frm-label forget_pw_frm-label" for="email">信箱</label>
+                      <div class="inni_frm-field">
+                        <input class="inni_frm-input forget_pw_frm-input" type="text" placeholder="請輸入信箱" id="email">
+                      </div>
+                    </div>
+                    <div class="row no-gutters">
+                      <div class="inni_frm-error" data-error-field="email"></div>
+                    </div>
+                  </div>
+                  <div class="form-group forget_pw_frm-btns mb-0">
+                    <button class="inni_btn inni_btn-blue forget_pw_frm-submit" type="button">送出</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="public/js/libs/jquery.min.js"><\/script>')</script>
     <!-- script(src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js")-->
     <script src="public/js/libs/plugin_mix.js"></script>
-    <script src="public/js/script.js?v=20200813"></script>
-    <script src="public/js/page/login.js"></script>
+    <script src="public/plugins/simplebar/simplebar.js"></script>
+    <script src="public/plugins/swiper/swiper-bundle.js"></script>
+    <script src="public/js/script.js?v=20201208"></script>
   </body>
 </html>

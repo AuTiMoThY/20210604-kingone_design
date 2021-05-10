@@ -121,7 +121,11 @@ $grid-breakpoints: (
 
 // custom variables
 @import "core/_custom_variable";
-@import "_core";
+
+// scss function
+@import "core/function/**/*.scss";
+// mixin
+@import "_mixin";
 
 
 
