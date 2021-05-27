@@ -3,7 +3,7 @@
 /*! *****************************************
 /*    css
 /*    V 2020.12.16
-			Bootstrap v4.5.3
+      Bootstrap v4.5.3
 /*        by AuOzzy
 /******************************************/
 
@@ -46,30 +46,30 @@ $grid-breakpoints: (
   xxl : 1366px,
 );
 // .media_temp {
-// 	@include media-breakpoint-down(xxs) {
-// 		.xxs {width: 374.98px; }
-// 	}
-// 	@include media-breakpoint-down(xs) {
-// 		.xs {width: 575.98px;}
-// 	}
-// 	@include media-breakpoint-down(sm) {
-// 		.sm {width: 767.98px;}
-// 	}
-// 	@include media-breakpoint-down(md) {
-// 		.md {width: 899.98px;}
-// 	}
-// 	@include media-breakpoint-down(lg) {
-// 		.lg {width: 1023.98px;}
-// 	}
-// 	@include media-breakpoint-down(llg) {
-// 		.llg {width: 1279.98px;}
-// 	}
-// 	@include media-breakpoint-down(xl) {
-// 		.xl {width: 1365.98px;}
-// 	}
-// 	@include media-breakpoint-down(xxl) {
-// 		.xxl {}
-// 	}
+//  @include media-breakpoint-down(xxs) {
+//    .xxs {width: 374.98px; }
+//  }
+//  @include media-breakpoint-down(xs) {
+//    .xs {width: 575.98px;}
+//  }
+//  @include media-breakpoint-down(sm) {
+//    .sm {width: 767.98px;}
+//  }
+//  @include media-breakpoint-down(md) {
+//    .md {width: 899.98px;}
+//  }
+//  @include media-breakpoint-down(lg) {
+//    .lg {width: 1023.98px;}
+//  }
+//  @include media-breakpoint-down(llg) {
+//    .llg {width: 1279.98px;}
+//  }
+//  @include media-breakpoint-down(xl) {
+//    .xl {width: 1365.98px;}
+//  }
+//  @include media-breakpoint-down(xxl) {
+//    .xxl {}
+//  }
 // }
 
 /******************************************/
@@ -149,9 +149,9 @@ $grid-breakpoints: (
 \*========================================================================*/
 
 @keyframes picBorderFlash {
-	0% {
+  0% {
     box-shadow: 0px 0px 5px rgba(#686969, 0);
-	}
+  }
   20% {
     box-shadow: 0px 0px 15px rgba(#686969, 0.3);
   }
@@ -180,14 +180,14 @@ $grid-breakpoints: (
 /*------------------------------------------------------------------------*\
 /*------------------------------------------------------------------------*\
 /*========================================================================*\
-		>	components
+    > components
 \*========================================================================*/
 @import "_components";
 
 /*------------------------------------------------------------------------*\
 /*------------------------------------------------------------------------*\
 /*========================================================================*\
-		>	layout
+    > layout
 \*========================================================================*/
 @import "_layout";
 
@@ -195,7 +195,7 @@ $grid-breakpoints: (
 /*------------------------------------------------------------------------*\
 /*------------------------------------------------------------------------*\
 /*========================================================================*\
-		>	pages
+    > pages
 \*========================================================================*/
 @import "pages/**/*.scss";
 
@@ -206,3 +206,9 @@ $grid-breakpoints: (
 \*========================================================================*/
 
 @import "custom/**/*.scss";
+
+
+.yo {
+    font-size: 3rem;
+}
+
