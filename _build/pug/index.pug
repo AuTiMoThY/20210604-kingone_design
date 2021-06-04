@@ -11,10 +11,39 @@ block popup
 
 block content
 	.page_wrap(class=page_class)
+		.page_wrap-bg
 		//- .m_mask
 		// =========================================================================
 		//   START
-		p 頁面內容
+		.frame
+			.frame-inner
+				.logo
+					img(src="public/images/logo.png" srcset="public/images/logo@2x.png 2x, public/images/logo@3x.png 3x")
+				.logo-txt
+					span.tw 流亞科技股份有限公司
+					.span.en Logic Art Automation Co., Ltd
+				.layer
+					img(src="public/images/layer.jpg" srcset="public/images/layer@2x.jpg 2x, public/images/layer@3x.jpg 3x")
+
+				.picture
+					img(src="public/images/picture.jpg" srcset="public/images/picture@2x.jpg 2x, public/images/picture@3x.jpg 3x")
+
+				.info
+					.info-title.hide_txt Web
+					ul.cf.lis-n
+						li.info-item
+							.title.hide_txt EMAIL
+							.cnt joseph.lo@logicart.com.tw
+						li.info-item
+							.title.hide_txt TEL
+							.cnt +886-2-2999-2899
+						li.info-item
+							.title.hide_txt FAX
+							.cnt +886-2-2999-2893
+						li.info-item
+							.title.hide_txt ADD
+							.cnt 8F-7, No.16, Lane 609, Sec.5, Chung-Shin Road, San-Chung Dist., New Taipei City, Taiwan
+
 		//   END  !!
 		// =========================================================================
 

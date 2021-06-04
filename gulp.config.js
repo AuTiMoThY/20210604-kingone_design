@@ -18,11 +18,13 @@ module.exports = {
         spritesImg: `./${src}/img_sprite/*.png`,
         spritesSvg: `./${src}/images/svg/*.svg`,
         js: `./${src}/script/*.js`,
+        img: [`./${src}/images/*`]
     },
     exportPath: {
         sass: `./${assets}/css/`,
         pug: `./app/`,
         js: `./${assets}/js/`,
+        img: `./${assets}/images/`
     },
     sassOpt: {
         outputStyle: 'compact',

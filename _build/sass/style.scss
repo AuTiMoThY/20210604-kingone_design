@@ -2,7 +2,7 @@
 
 /*! *****************************************
 /*    css
-/*    V 2020.12.16
+/*    V 2021.06.04
       Bootstrap v4.5.3
 /*        by AuOzzy
 /******************************************/
@@ -192,23 +192,103 @@ $grid-breakpoints: (
 @import "_layout";
 
 
-/*------------------------------------------------------------------------*\
-/*------------------------------------------------------------------------*\
-/*========================================================================*\
-    > pages
-\*========================================================================*/
-@import "pages/**/*.scss";
+// /*------------------------------------------------------------------------*\
+// /*------------------------------------------------------------------------*\
+// /*========================================================================*\
+//     > pages
+// \*========================================================================*/
+// @import "pages/**/*.scss";
 
-/*------------------------------------------------------------------------*\
-/*------------------------------------------------------------------------*\
-/*========================================================================*\
-    > custom
-\*========================================================================*/
+// /*------------------------------------------------------------------------*\
+// /*------------------------------------------------------------------------*\
+// /*========================================================================*\
+//     > custom
+// \*========================================================================*/
 
-@import "custom/**/*.scss";
+// @import "custom/**/*.scss";
 
 
-.yo {
-    font-size: 3rem;
+.frame {
+    position: relative;
+    width: percentage(1428 / 1920);
+
+    &-inner {
+        @include rwdBlock(1428, 966.2);
+
+        background-position: 50% 50%;
+        background-image: url('../images/stall-image-green.png');
+        // background-size: contain;
+        background-repeat: no-repeat;
+    }
+
 }
 
+
+
+.logo {
+    @include absolute(percentage(57.6 / 966), $L:percentage(399.8 / 1428));
+    @include wh(percentage(125 / 1428), percentage(81.9 / 966));
+}
+
+
+.layer {
+    @include absolute(percentage(392.7 / 966), $L:percentage(325 / 1428));
+    @include wh(percentage(713.7 / 1428), percentage(399.6 / 966));
+}
+
+.picture {
+    @include absolute(percentage(418.8 / 966), $L:percentage(51.3 / 1428));
+    @include wh(percentage(170.2 / 1428), percentage(170.2 / 966));
+}
+
+$info-w: 273.1;
+$info-h: 353.8;
+.info {
+    @include absolute(percentage(407 / 966), $L:percentage(1106.6 / 1428));
+    @include wh(percentage($info-w / 1428), percentage($info-h / 966));
+
+    background-position: 50% 50%;
+    background-image: url('../images/acr-image.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    &-title {
+        @include absolute(percentage(0 / $info-h), $L:percentage(194.4 / $info-w));
+        @include wh(percentage(52.6 / $info-w), percentage(52.6 / $info-h));
+
+        background-position: 50% 50%;
+        background-image: url('../images/info-title.png');
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+
+    ul {
+        padding-top: percentage(57.6 / $info-h);
+        padding-left: percentage(32.9 / $info-w);
+        padding-right: percentage(32.9 / $info-w);
+    }
+
+    &-item {
+        position: relative;
+        margin-bottom: 3px;
+
+        color: #333;
+        font-size: 13.4px;
+        .title {
+            @include wh(percentage(57.4 / $info-w), percentage(21.1 / $info-h));
+
+            background-position: 50% 50%;
+            background-image: url('../images/email.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+
+        &:nth-of-type(2) {
+            .title {
+                background-image: url('../images/tel.png');
+            }
+        }
+    }
+}

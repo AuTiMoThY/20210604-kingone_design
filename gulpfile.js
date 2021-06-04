@@ -105,6 +105,25 @@ function generateHTML () {
     });
 }
 
+function imageMmin (){
+    var onError = (err) => {
+        notify.onError({
+                    title:    "Gulp image-min",
+                    subtitle: "Failure!",
+                    message:  "Error: <%= error.message %>"
+                })(err);
+        this.emit('end');
+    };
+
+
+    return src(config.srcPath.img)
+    .pipe(imagemin())
+    .pipe(dest(config.exportPath.img))
+    .on('end', () => {
+        return del(config.srcPath.img)
+    });
+}
+
 
 
 function script() {
@@ -153,5 +172,6 @@ function browserSync() {
 
 exports.sass = generateCSS;
 exports.pug = generateHTML;
+exports.imageMin = imageMmin;
 
 exports.default = series(browserSync);
